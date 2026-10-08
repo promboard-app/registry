@@ -1,5 +1,30 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-08T14:55:10.316Z",
-  "plugins": []
+  "generatedAt": "2026-10-08T15:30:03.400Z",
+  "plugins": [
+    {
+      "schema": 1,
+      "id": "promboard.test-card-set",
+      "name": "필름 누아르 카드 (시험)",
+      "description": "필름 누아르 분위기 전문용어 카드 3장과 카드 세트 1개. 코드가 없는 플러그인의 레지스트리 첫 등록 시험용이다.",
+      "author": "PromBoard",
+      "license": "MIT",
+      "repository": "https://github.com/promboard-app/test-card-set",
+      "contents": [
+        "cards",
+        "cardSets"
+      ],
+      "versions": [
+        {
+          "version": "0.1.0",
+          "app": ">=0.15.0",
+          "url": "https://github.com/promboard-app/test-card-set/releases/download/v0.1.0/promboard.test-card-set-0.1.0.zip",
+          "bytes": 2872,
+          "sha256": "8e939afcbb74ca71faaf40eef6332ce39282f671e3d397070d4de7b70cfee535"
+        }
+      ],
+      "stars": 0,
+      "downloads": 0
+    }
+  ]
 }
