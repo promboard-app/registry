@@ -1,0 +1,49 @@
+# 플러그인 등록 PR 자동 검사 (본보기 — 앱 저장소 server/registry-template/ 에서 복사)
+# 검사 코드는 앱 저장소 server/src/plugins/registry/check.ts. 플러그인 코드는 실행하지 않는다.
+# pull_request(포크 PR 에 쓰기 권한·비밀값 없음)로 돈다 — pull_request_target 으로 바꾸지 않는다.
+name: 플러그인 검사
+
+on:
+  pull_request:
+    paths:
+      - "plugins/**"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: 이 PR 의 레지스트리
+        uses: actions/checkout@v7
+        with:
+          path: head
+
+      - name: 병합 대상 레지스트리 (올린 버전 비교용)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+
+      - name: 검사 코드 (PromBoard 앱 저장소)
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ vars.PROMBOARD_APP_REPOSITORY || 'guru99251/promboard' }}
+          ref: ${{ vars.PROMBOARD_APP_REF || 'local/master' }}
+          token: ${{ secrets.PROMBOARD_APP_TOKEN || github.token }}
+          path: app
+          sparse-checkout: server
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+
+      - name: 의존성 (네이티브 빌드 없이)
+        working-directory: app/server
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: 검사
+        working-directory: app/server
+        run: npx tsx src/tools/registry.ts check --registry "$GITHUB_WORKSPACE/head" --base "$GITHUB_WORKSPACE/base"
