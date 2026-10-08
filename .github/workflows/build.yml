@@ -1,6 +1,8 @@
 # registry.json 만들기 (본보기 — 앱 저장소 server/registry-template/ 에서 복사)
 # main 에 병합될 때와 하루 한 번(Star·다운로드 수 갱신) 돈다. 내용이 같으면(generatedAt 만 다르면) 커밋하지 않는다.
-# GITHUB_TOKEN 으로 한 푸시는 다른 워크플로를 깨우지 않아 되풀이되지 않는다.
+# main 은 보호 규칙(PR 필수)이 걸려 있어 GITHUB_TOKEN 으로는 못 올린다. 그래서 쓰기 배포 키(규칙 예외)로 올린다.
+# 그 키는 main 에서만 꺼낼 수 있는 환경(registry-build)에 둔다 — 다른 브랜치의 워크플로는 키를 못 읽는다.
+# 이 커밋은 registry.json 만 바꿔 plugins/** 경로 조건에 걸리지 않으므로 되풀이되지 않는다.
 name: registry.json 만들기
 
 on:
@@ -22,12 +24,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: registry-build
     timeout-minutes: 15
     steps:
       - name: 레지스트리
         uses: actions/checkout@v7
         with:
           path: registry
+          ssh-key: ${{ secrets.REGISTRY_DEPLOY_KEY }}
 
       - name: 빌드 코드 (PromBoard 앱 저장소)
         uses: actions/checkout@v7

@@ -73,4 +73,5 @@ PromBoard 앱의 **플러그인 매니저**가 읽는 플러그인 목록입니�
 - **앱 저장소가 비공개인 동안**
   - 비밀값 `PROMBOARD_APP_TOKEN`(앱 저장소 읽기 권한 토큰)이 필요합니다.
   - 포크에서 온 PR 에는 비밀값이 전달되지 않습니다. 그래서 공개 전까지는 **조직 멤버가 이 저장소의 브랜치로 PR** 을 보냅니다.
-- **`main` 보호 규칙**: `build.yml` 이 `registry.json` 을 `main` 에 직접 커밋합니다. 그래서 `github-actions[bot]` 의 푸시를 허용해야 합니다.
+- **`main` 보호 규칙**(저장소 Rulesets): PR 필수 · 자동 검사(`check`) 통과 · 코드 소유자(`.github/CODEOWNERS`) 1명 승인. 예외는 배포 키(목록 갱신용)와, PR 병합 때의 조직 관리자뿐입니다.
+- **목록 갱신 키**: `build.yml` 은 `registry.json` 을 `main` 에 직접 커밋합니다. GitHub 는 Actions 기본 계정을 보호 규칙 예외로 둘 수 없어서, 쓰기 권한 배포 키를 예외로 두고 그 비밀 키를 환경 `registry-build`(배포 브랜치 `main` 만)의 비밀값 `REGISTRY_DEPLOY_KEY` 에 넣습니다.
