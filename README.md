@@ -11,7 +11,8 @@ PromBoard 앱의 **플러그인 매니저**가 읽는 플러그인 목록입니�
    - id 앞부분이 저장소 주인과 다르면 검사에서 떨어집니다. `promboard.` 는 공식 조직(`promboard-app`) 전용입니다.
 2. **zip 을 만들어 Release 에 올립니다.**
    - zip **맨 위에** `manifest.json` 이 있어야 합니다. 폴더째 압축하지 마세요.
-   - `__pycache__`·`.pyc`·실행 파일·wheel 은 넣지 마세요.
+   - `__pycache__`·`.pyc`·실행 파일·wheel, zip 속의 또 다른 압축 파일은 넣지 마세요.
+   - 파일 이름은 Windows 에서도 쓸 수 있어야 합니다. `aux`·`con`·`nul` 같은 예약 이름, 점이나 공백으로 끝나는 이름, 대소문자만 다른 두 파일은 안 됩니다. 파일은 1만 개까지입니다.
    - AI 모델 파일은 넣지 않습니다. `manifest.json` 의 `requires.models` 에 출처·커밋·해시만 적습니다.
 3. **이 저장소에 PR 을 보냅니다.** 파일 하나, `plugins/<플러그인 id>.json` 을 추가합니다.
 
@@ -39,8 +40,31 @@ PromBoard 앱의 **플러그인 매니저**가 읽는 플러그인 목록입니�
 }
 ```
 
-- **`versions[]` 의 `app` · `requires` · `permissions`** 는 zip 안 `manifest.json` 과 같아야 합니다.
+- **`url`** 은 `repository` 저장소의 `/releases/download/<태그>/<파일>.zip` 입니다. Release 화면의 파일 주소를 그대로 붙여 넣으세요. `..`·`%2e` 처럼 읽을 때 바뀌는 주소는 떨어집니다.
+- **`versions[]` 의 `app` · `requires` · `permissions` · `nonCommercial` · `licenseNotice`** 는 zip 안 `manifest.json` 과 같아야 합니다.
 - **새 버전**: 배열 끝에 버전을 하나 더 붙입니다. **한 번 올린 버전은 고치거나 지울 수 없습니다.** 바꾸려면 버전을 올리세요.
+
+## 커스텀 노드 화면 (`manifest.json` 의 `nodes[]`)
+
+노드 화면은 화면 코드 없이 칸 몇 개로 고릅니다. 모두 선택 칸이고, `schema` 번호는 1 그대로입니다. 아무것도 적지 않으면 앱이 출력 · 입력 개수와 데이터 타입에 맞춰 알아서 고릅니다(`auto`).
+
+| 칸 | 값 | 뜻 |
+|---|---|---|
+| `layout` | `auto`(기본) · `single` · `dual` · `grid` · `sources` · `sourceStrip` · `settings` · `text` | `single` 출력 1칸 · `dual` 출력 2칸 · `grid` 격자(4칸, 넘치면 '+N') · `sources` 출력 + 소스 2칸 · `sourceStrip` 출력 + 소스 한 줄(가로 스크롤) · `settings` 출력 + 설정 패널 · `text` 글 상자 |
+| `showSources` | `true` | 입력 원본을 소스 칸에 보입니다. `layout` 이 `auto` · `sources` · `sourceStrip` 일 때만 |
+| `sources` | 입력 포트 `id` 목록(1~8) | 소스 칸에 보일 입력 포트. 안 적으면 앱이 `text` 밖 입력을 영상 → 그림 → 나머지 순으로 넣습니다. `text` 포트는 못 넣습니다 |
+| `settingsPanel` | `true` | 설정을 모서리 알약 대신 오른쪽 패널로 보입니다. `layout` 이 `auto` · `settings` 일 때만 |
+| `views` | `compare` · `resultText` · `frameStrip` · `orbit3d` | 레이아웃 위에 얹는 보기 방식. `compare` 전/후 비교 슬라이더(그림 입력 + 그림 출력) · `resultText` 결과 아래 글 상자와 [복사](글 출력 + 그 밖의 출력) · `frameStrip` 영상 프레임 줄(영상 출력) · `orbit3d` 3D 돌려 보기(3D 출력) |
+| `compare` | `{ "before": "<그림 입력 id>", "after": "<그림 출력 id>" }` | 비교할 쌍. `views` 에 `compare` 가 있을 때만 쓰고, 안 적으면 첫 그림 입력과 첫 그림 출력입니다 |
+| `template` | `image` · `video` · `imageRemix` · `memo` | 옛 칸입니다. `layout` 과 같이 쓰지 않습니다(`image` · `video` · `imageRemix` → `single`, `memo` → `text`). 옛 칸만 쓴 노드는 보기 방식(`views`)을 그리지 않으므로 `layout` 으로 바꿔 적으세요 |
+
+다음 조합은 앱이 조용히 무시하므로 **검사에서 떨어집니다**.
+
+- `layout` 과 `template` 을 같이 적음
+- `single` 인데 글(`text`) 밖 출력 포트가 1개가 아님, `dual` 인데 2개가 아님, `text` 인데 `text` 출력이 없음
+- 소스 칸 설정이 어긋남: 소스로 보일 입력(`text` 밖)이 없음, `sources` 에 없는 `id` 나 `text` 포트, `sources` · `sourceStrip` 인데 `showSources: false`, 소스 칸이 없는 레이아웃에 `showSources: true`
+- 설정 패널 설정이 어긋남: `settings` 가 비어 있음, `settings` 레이아웃인데 `settingsPanel: false`, 설정 패널이 없는 레이아웃에 `settingsPanel: true`, 설정 패널과 `showSources` 를 같이 적음
+- `text` 레이아웃 또는 옛 `template` 만 쓴 노드에 `views` · `compare` 를 적음, 보기 방식에 필요한 포트가 없음, `compare` 쌍이 그림 입력 · 그림 출력이 아님
 
 ## 자동 검사 (PR)
 
@@ -50,16 +74,35 @@ PromBoard 앱의 **플러그인 매니저**가 읽는 플러그인 목록입니�
 - 올린 버전을 고치거나 지우지 않았는가
 - 필요한 플러그인(`requires`)이 이 레지스트리에 있는가
 - 새 버전의 zip 을 받아 크기·sha256 이 맞는가
-- zip 안 `manifest.json` 이 항목과 같은가, 앱이 읽을 때 건너뛰지 않는가(카드·카드 세트·워크플로우·이미지)
+- zip 안 `manifest.json` 이 항목과 같은가, 앱이 읽을 때 건너뛰지 않는가(카드·카드 세트·워크플로우, 카드가 가리킨 이미지·폰트·음원·라이선스 원문)
+- zip 을 Windows 규칙으로 풀 수 있는가(예약 이름·끝 점·대소문자만 다른 이름 없음, 파일 1만 개까지)
+- **라이선스**: 라이선스 종류로 플러그인을 거절하지 않습니다. 대신 사용자가 알 수 있게 조건을 적어야 합니다. 앱은 플러그인마다 이 안내를 보여 주고, 설치할 때 사용자에게 읽었다는 확인을 받습니다. 조건을 지키는 책임은 쓰는 사람에게 있습니다.
+  - 비상업 라이선스(코드 · 카드 · 모델)가 하나라도 있으면 `manifest.json` 과 레지스트리 버전 항목에 `"nonCommercial": true` 를 적습니다. 적지 않으면 떨어집니다. 만든 결과물에는 '비상업' 표시가 붙습니다.
+  - 라이선스가 일부 지역의 사용을 허락하지 않으면(예: Tencent Hunyuan 은 EU · 영국 · 대한민국, MiniMax-H3 는 여기에 미국까지) `"licenseNotice": { "excludedRegions": ["EU", "GB", "KR"] }` 처럼 적습니다. 지역은 ISO 국가 코드 두 글자와 `EU` 입니다. 이 두 라이선스는 검사가 알아봅니다(라이선스 이름 · 모델 저장소 · 모델 파일 주소 · AI 모델 endpoint, 호스팅을 거쳐도 같습니다). 적지 않으면 떨어집니다.
+  - 매출 상한 · 표기 의무 같은 그 밖의 조건은 `licenseNotice.conditions`(500자까지), 원문 주소는 `licenseNotice.url` 에 적습니다.
+  - 폰트 카드는 라이선스 원문(`.txt`·`.md`)을 같이 넣습니다. 폰트 파일을 플러그인에 담아 올리는 것은 재배포이므로, 재배포를 허락하는 폰트인지는 올리는 사람이 확인합니다.
+- **재료 카드 파일**: 폰트(`ttf`·`otf`·`woff`·`woff2`)는 파일 하나 30MB, 음원(`mp3`·`wav`·`m4a`·`ogg`·`flac`)은 50MB 까지입니다. 확장자만이 아니라 파일 내용도 그 형식이어야 합니다.
 - **금지 규칙**
-  - 문자열을 코드로 실행(`eval`·`exec`·`compile`·`__import__`)
-  - 숨긴 코드(`marshal`, 아주 긴 줄, 컴파일된 파일)
+  - 문자열을 코드로 실행(`eval`·`exec`·`compile`·`__import__`). 이름이 같은 메서드 정의(`def eval(self…)`)는 괜찮습니다
+  - 숨긴 코드(`marshal`, 아주 긴 줄, 컴파일된 파일, utf-8 이 아닌 `# coding:` 선언)
   - 실행 중 패키지 설치(`pip install`), 셸 명령(`os.system`·`shell=True`)
   - `trust_remote_code=True`, `weights_only=False`
+  - 넣을 수 없는 파일: 컴파일된 코드·실행 파일·패키지(`.pyc`·`.so`·`.dll`·`.exe`·`.sh`·`.whl` 등), 속에 든 압축 파일(`.zip`·`.egg`·`.pyz`·`.tar`·`.gz`·`.tgz`·`.7z`·`.rar`), `.pth`·`.pyw`
   - 코드 없는 플러그인 안의 코드 파일
-- **커스텀 노드**: 적은 운영체제마다 잠금 파일이 있고, 모든 패키지 줄에 `--hash=sha256:` 이 있는가(`uv pip compile --generate-hashes`). 진입 모듈이 있는가
+  - 파이썬처럼 `\r` 하나만 쓴 줄바꿈도 줄로 나눠 봅니다. 주석 줄(`#`)은 보지 않습니다
+- **커스텀 노드**: 적은 운영체제마다 잠금 파일이 있고, 모든 패키지 줄에 `--hash=sha256:` 이 있는가(`uv pip compile --generate-hashes` 결과 그대로면 됩니다). 진입 모듈이 있는가
+  - 받는 곳(`--index-url`·`--extra-index-url`)은 `https://pypi.org/simple` 과 `https://download.pytorch.org/whl/…` 만 됩니다
+  - 주소·로컬 경로·파일로 받는 패키지(`git+`·`https:`·`file:`·`@`·`./x.whl`)는 안 되고, 패키지 줄에는 해시 말고 다른 옵션을 붙일 수 없습니다
+  - 줄 끝 `\` 만 다음 줄과 잇습니다. 주석이 든 줄을 `\` 로 잇거나 공백 없이 `\` 로 이으면 떨어집니다(pip 과 uv 가 다르게 읽습니다)
+- **노드 화면 칸**: `layout` · `views` 등 노드 화면 칸(아래 「커스텀 노드 화면」)이 웹이 조용히 무시할 조합이면 떨어집니다
+- **「시작 전에 할 일」 글**: 할 일 제목 · 기다림 안내 · 단계 글 · 링크 이름 · 키 이름에 줄바꿈이나 제어 문자가 있으면 떨어집니다
+- **「시작 전에 할 일」 안내 링크**: 막지 않고 모아서 검사 결과의 🔗 줄(PR 검사 화면 알림)로 보입니다
 
-자동 검사를 통과해도 **사람이 한 번 더 봅니다.** 특히 커스텀 노드는 남의 PC 에서 돌기 때문입니다.
+자동 검사를 통과해도 **사람이 한 번 더 봅니다.** 금지 규칙은 글자 모양으로 찾는 검사라 빈틈이 있습니다(문자열·속성으로 우회, `subprocess` 목록 실행, `pickle` 등). 그래서 커스텀 노드는 **사람 심사가 꼭 필요합니다**. 남의 PC 에서 돌기 때문입니다.
+
+AI 모델을 더하는 플러그인(`aiModels`)도 **사람 심사가 꼭 필요합니다**. 코드는 없지만 사용자 키로 요금이 나가고, 프롬프트 · 이미지가 그 모델로 가기 때문입니다. endpoint 가 설명과 같은 모델인지, 값이 지나치게 비싼 모델이 아닌지 봅니다.
+
+사람 심사에서는 검사 결과의 🔗 줄(PR 검사 화면 알림)에 모인 안내 링크가 플러그인 설명과 맞는 곳인지도 확인합니다.
 
 ## registry.json
 
