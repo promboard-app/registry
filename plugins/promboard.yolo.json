@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "id": "promboard.yolo",
+  "name": "Ultralytics YOLO — 포즈 뼈대 · 물체 잘라내기 · 찾기와 추적",
+  "description": "사진 · 영상 속 사람 자세를 색 뼈대 그림 · 뼈대 영상으로 뽑거나(이미지 · 영상 생성 노드에 참조로 이어 '같은 자세 · 같은 동작'으로 쓸 때), 사람 · 물건을 찾아 하나씩 잘라 내거나 흑백 마스크 영상으로 낸다. 찾은 것에 상자 · 이름(영상은 추적 번호 · 이동 꼬리까지)을 그린 결과도 늘 함께 나온다. 모델은 Ultralytics 공식 YOLO26n 포즈 · 분할(각 약 12MB, AGPL-3.0)을 원래 출처(GitHub 릴리스)에서 받는다. 그래픽카드 없이 CPU 로 사진 한 장에 1초 안팎, 영상은 1080p 한 프레임에 0.1초 안팎이다. 예제 사진 5장과 워크플로우 2개(사진 → 같은 자세로 새 인물, 영상 → 같은 동작으로 새 인물)가 들어 있다.",
+  "author": "PromBoard",
+  "license": "AGPL-3.0-only",
+  "repository": "https://github.com/promboard-app/yolo",
+  "contents": [
+    "nodes",
+    "cards",
+    "workflows"
+  ],
+  "nodes": [
+    "yolo"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.1",
+      "url": "https://github.com/promboard-app/yolo/releases/download/v1.0.0/promboard.yolo-1.0.0.zip",
+      "bytes": 1594602,
+      "sha256": "2b622d28aa7071989180a4d8421fd51c6878a6bd5dec91bf40a3123f5c6f1b59",
+      "permissions": {}
+    },
+    {
+      "version": "1.1.0",
+      "app": ">=1.0.1",
+      "url": "https://github.com/promboard-app/yolo/releases/download/v1.1.0/promboard.yolo-1.1.0.zip",
+      "bytes": 1691204,
+      "sha256": "c1cb4f38dd34f68fb1491aadc4d60447a028f8b34de7c7c23b469a9532d998aa",
+      "permissions": {}
+    }
+  ]
+}
