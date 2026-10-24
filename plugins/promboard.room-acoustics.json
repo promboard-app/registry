@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "id": "promboard.room-acoustics",
+  "name": "공간 울림 · 잡음 줄이기",
+  "description": "소리에 욕실 · 거실 · 성당 같은 실제 공간의 울림을 입히거나, 말소리 뒤의 잡음을 줄인다. 오픈소스 pyroomacoustics(MIT)의 방 시뮬레이션과 잡음 줄이기 기능을 쓴다. 켜면 렌더 탭 소리 클립 메뉴 [오디오 효과]에도 뜬다. AI 모델 없이 CPU 로 몇 초 안에 끝난다.",
+  "author": "PromBoard",
+  "license": "MIT",
+  "repository": "https://github.com/promboard-app/room-acoustics",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "room-acoustics"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.2",
+      "url": "https://github.com/promboard-app/room-acoustics/releases/download/v1.0.0/promboard.room-acoustics-1.0.0.zip",
+      "bytes": 116401,
+      "sha256": "732e884a706a3d70983c37014b8f4f7fa879cdc2ea400e18ae30b7fff62157b9"
+    }
+  ]
+}
