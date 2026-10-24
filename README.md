@@ -56,6 +56,7 @@ PromBoard 앱의 **플러그인 매니저**가 읽는 플러그인 목록입니�
 | `settingsPanel` | `true` | 설정을 모서리 알약 대신 오른쪽 패널로 보입니다. `layout` 이 `auto` · `settings` 일 때만 |
 | `views` | `compare` · `resultText` · `frameStrip` · `orbit3d` | 레이아웃 위에 얹는 보기 방식. `compare` 전/후 비교 슬라이더(그림 입력 + 그림 출력) · `resultText` 결과 아래 글 상자와 [복사](글 출력 + 그 밖의 출력) · `frameStrip` 영상 프레임 줄(영상 출력) · `orbit3d` 3D 돌려 보기(3D 출력) |
 | `compare` | `{ "before": "<그림 입력 id>", "after": "<그림 출력 id>" }` | 비교할 쌍. `views` 에 `compare` 가 있을 때만 쓰고, 안 적으면 첫 그림 입력과 첫 그림 출력입니다 |
+| `renderEffect` | `audio` | 이 노드를 렌더 탭 효과로도 씁니다. 플러그인을 켜면 소리 클립 오른쪽 클릭 메뉴 [오디오 효과 ›]에 뜨고, 고른 클립 소리를 입력에 넣어 돌린 결과 소리로 바꿉니다(원래 소리로 되돌릴 수 있습니다). 입력 포트는 소리(`audio`) 하나(선 하나), 출력 포트도 소리 하나뿐이어야 합니다. 이 칸을 쓴 플러그인은 칸을 모르는 옛 앱이 건너뛰므로 `app` 을 `>=1.0.2` 이상으로 적으세요 |
 | `template` | `image` · `video` · `imageRemix` · `memo` | 옛 칸입니다. `layout` 과 같이 쓰지 않습니다(`image` · `video` · `imageRemix` → `single`, `memo` → `text`). 옛 칸만 쓴 노드는 보기 방식(`views`)을 그리지 않으므로 `layout` 으로 바꿔 적으세요 |
 
 다음 조합은 앱이 조용히 무시하므로 **검사에서 떨어집니다**.
@@ -65,6 +66,7 @@ PromBoard 앱의 **플러그인 매니저**가 읽는 플러그인 목록입니�
 - 소스 칸 설정이 어긋남: 소스로 보일 입력(`text` 밖)이 없음, `sources` 에 없는 `id` 나 `text` 포트, `sources` · `sourceStrip` 인데 `showSources: false`, 소스 칸이 없는 레이아웃에 `showSources: true`
 - 설정 패널 설정이 어긋남: `settings` 가 비어 있음, `settings` 레이아웃인데 `settingsPanel: false`, 설정 패널이 없는 레이아웃에 `settingsPanel: true`, 설정 패널과 `showSources` 를 같이 적음
 - `text` 레이아웃 또는 옛 `template` 만 쓴 노드에 `views` · `compare` 를 적음, 보기 방식에 필요한 포트가 없음, `compare` 쌍이 그림 입력 · 그림 출력이 아님
+- `renderEffect: "audio"` 인데 입력이 소리 하나(선 하나) · 출력이 소리 하나가 아님
 
 ## 자동 검사 (PR)
 
