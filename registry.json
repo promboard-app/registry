@@ -1,7 +1,60 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-19T08:55:31.591Z",
+  "generatedAt": "2026-10-24T16:09:15.354Z",
   "plugins": [
+    {
+      "schema": 1,
+      "id": "promboard.photo-effects",
+      "name": "사진 효과 모음",
+      "description": "사진 한 장에 그림 같은 효과를 입힌다. 픽셀아트 · 연필 스케치 · 듀오톤 · 망점 인쇄 · 유화 다섯 가지 중에서 고르고, 세기를 약하게 · 보통 · 강하게 중에서 고른다. AI 모델을 받지 않고 그래픽카드 없이 CPU 로 돈다. 처음 실행 준비 때 Pillow · numpy 를 받는다(파이썬이 없는 PC 는 파이썬도). 긴 변이 2560px 를 넘는 사진은 2560px 로 줄여서 처리한다. 투명한 부분은 그대로 둔다.",
+      "author": "PromBoard",
+      "license": "MIT",
+      "repository": "https://github.com/promboard-app/photo-effects",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "photo-effect"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.1",
+          "url": "https://github.com/promboard-app/photo-effects/releases/download/v1.0.0/promboard.photo-effects-1.0.0.zip",
+          "bytes": 63588,
+          "sha256": "510ff4971fcab1dee58eb2826a9dcb32e7c402044b8d47d1599923bb1752d8b2",
+          "permissions": {}
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.room-acoustics",
+      "name": "공간 울림 · 잡음 줄이기",
+      "description": "소리에 욕실 · 거실 · 성당 같은 실제 공간의 울림을 입히거나, 말소리 뒤의 잡음을 줄인다. 오픈소스 pyroomacoustics(MIT)의 방 시뮬레이션과 잡음 줄이기 기능을 쓴다. 켜면 렌더 탭 소리 클립 메뉴 [오디오 효과]에도 뜬다. AI 모델 없이 CPU 로 몇 초 안에 끝난다.",
+      "author": "PromBoard",
+      "license": "MIT",
+      "repository": "https://github.com/promboard-app/room-acoustics",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "room-acoustics"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.2",
+          "url": "https://github.com/promboard-app/room-acoustics/releases/download/v1.0.0/promboard.room-acoustics-1.0.0.zip",
+          "bytes": 116401,
+          "sha256": "732e884a706a3d70983c37014b8f4f7fa879cdc2ea400e18ae30b7fff62157b9"
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
     {
       "schema": 1,
       "id": "promboard.test-card-set",
@@ -25,6 +78,43 @@
       ],
       "stars": 0,
       "downloads": 6
+    },
+    {
+      "schema": 1,
+      "id": "promboard.yolo",
+      "name": "Ultralytics YOLO — 포즈 뼈대 · 물체 잘라내기 · 찾기와 추적",
+      "description": "사진 · 영상 속 사람 자세를 색 뼈대 그림 · 뼈대 영상으로 뽑거나(이미지 · 영상 생성 노드에 참조로 이어 '같은 자세 · 같은 동작'으로 쓸 때), 사람 · 물건을 찾아 하나씩 잘라 내거나 흑백 마스크 영상으로 낸다. 찾은 것에 상자 · 이름(영상은 추적 번호 · 이동 꼬리까지)을 그린 결과도 늘 함께 나온다. 모델은 Ultralytics 공식 YOLO26n 포즈 · 분할(각 약 12MB, AGPL-3.0)을 원래 출처(GitHub 릴리스)에서 받는다. 그래픽카드 없이 CPU 로 사진 한 장에 1초 안팎, 영상은 1080p 한 프레임에 0.1초 안팎이다. 예제 사진 5장과 워크플로우 2개(사진 → 같은 자세로 새 인물, 영상 → 같은 동작으로 새 인물)가 들어 있다.",
+      "author": "PromBoard",
+      "license": "AGPL-3.0-only",
+      "repository": "https://github.com/promboard-app/yolo",
+      "contents": [
+        "nodes",
+        "cards",
+        "workflows"
+      ],
+      "nodes": [
+        "yolo"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.1",
+          "url": "https://github.com/promboard-app/yolo/releases/download/v1.0.0/promboard.yolo-1.0.0.zip",
+          "bytes": 1594602,
+          "sha256": "2b622d28aa7071989180a4d8421fd51c6878a6bd5dec91bf40a3123f5c6f1b59",
+          "permissions": {}
+        },
+        {
+          "version": "1.1.0",
+          "app": ">=1.0.1",
+          "url": "https://github.com/promboard-app/yolo/releases/download/v1.1.0/promboard.yolo-1.1.0.zip",
+          "bytes": 1691204,
+          "sha256": "c1cb4f38dd34f68fb1491aadc4d60447a028f8b34de7c7c23b469a9532d998aa",
+          "permissions": {}
+        }
+      ],
+      "stars": 0,
+      "downloads": 5
     }
   ]
 }
