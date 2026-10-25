@@ -14,11 +14,11 @@
   ],
   "versions": [
     {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "app": ">=1.0.3",
-      "url": "https://github.com/promboard-app/magenta-rt/releases/download/v1.0.1/promboard.magenta-rt-1.0.1.zip",
-      "bytes": 377895,
-      "sha256": "b82fe4fc1db8bac7aadb4758f880309e8122f8481cb1abbcbc2ccc3d5b0eda9e",
+      "url": "https://github.com/promboard-app/magenta-rt/releases/download/v1.0.2/promboard.magenta-rt-1.0.2.zip",
+      "bytes": 378352,
+      "sha256": "16a4136fdb14c0fc2424dfda3f752f5e4694da5866d7f54aaeb34220dafcce3f",
       "permissions": {},
       "licenseNotice": {
         "conditions": "가중치는 Google 의 CC-BY-4.0 이다 — 만든 곡이나 모델을 쓸 때 'Magenta RealTime 2 (Google DeepMind), CC-BY-4.0' 처럼 출처를 밝힌다. 남의 저작권 등 권리를 침해하는 결과물을 만들지 않는다(Google 이용 조건). 결과물에 대한 권리는 Google 이 주장하지 않는다.",
@@ -27,6 +27,7 @@
       "categories": [
         "music"
       ],
+      "unverified": true,
       "gpu": {
         "vramMinMb": 2048,
         "cpuAllowed": false
