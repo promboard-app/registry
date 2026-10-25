@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T15:53:57.300Z",
+  "generatedAt": "2026-10-25T15:54:41.632Z",
   "plugins": [
     {
       "schema": 1,
@@ -2375,10 +2375,30 @@
             "win",
             "linux"
           ]
+        },
+        {
+          "version": "1.0.2",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/wan22-animate/releases/download/v1.0.2/promboard.wan22-animate-1.0.2.zip",
+          "bytes": 547747,
+          "sha256": "eb9be1ee0d55f8b56a6fe12c7138c2d3876cb41195b80689345003893da69259",
+          "permissions": {},
+          "categories": [
+            "motionTransfer"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 24000,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 4
     },
     {
       "schema": 1,
