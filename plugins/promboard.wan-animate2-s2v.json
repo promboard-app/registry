@@ -33,6 +33,27 @@
         "win",
         "linux"
       ]
+    },
+    {
+      "version": "1.0.2",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/wan-animate2-s2v/releases/download/v1.0.2/promboard.wan-animate2-s2v-1.0.2.zip",
+      "bytes": 583527,
+      "sha256": "7259215e3fee7a50e28e2fd4da46d5b9123b5ca9a1e243cd2b1624a6854ea3e3",
+      "permissions": {},
+      "categories": [
+        "motionTransfer",
+        "videoGenerate"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 80000,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "linux"
+      ]
     }
   ]
 }
