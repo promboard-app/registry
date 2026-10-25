@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T15:44:15.459Z",
+  "generatedAt": "2026-10-25T15:44:59.398Z",
   "plugins": [
     {
       "schema": 1,
@@ -810,6 +810,27 @@
           "url": "https://github.com/promboard-app/moss-image/releases/download/v1.0.0/promboard.moss-image-1.0.0.zip",
           "bytes": 321582,
           "sha256": "5b05f739b1fa29f2d0699f6ec8f7e402de05fe47c0b430eb2fbf8c638bf9fc43",
+          "permissions": {},
+          "categories": [
+            "imageGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 12288,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        },
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/moss-image/releases/download/v1.0.1/promboard.moss-image-1.0.1.zip",
+          "bytes": 322694,
+          "sha256": "f0ff6851df7186d6e93abcd2294b8685f979c0969a3b67b069151b3f8647c55a",
           "permissions": {},
           "categories": [
             "imageGenerate"
