@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T15:46:37.256Z",
+  "generatedAt": "2026-10-25T15:47:26.354Z",
   "plugins": [
     {
       "schema": 1,
@@ -1692,6 +1692,33 @@
           "url": "https://github.com/promboard-app/qwen-image-2-1/releases/download/v1.0.0/promboard.qwen-image-2-1-1.0.0.zip",
           "bytes": 306295,
           "sha256": "dbcfe6c1becb883f61b73f3ee038aeb6b62a7542ae56d4f0f5076d8db1f0fc86",
+          "permissions": {},
+          "nonCommercial": true,
+          "licenseNotice": {
+            "conditions": "Qwen Research License: 연구 · 평가 목적으로만 쓸 수 있다(상업 사용은 Alibaba 와 따로 계약해야 한다). 이 모델로 학습 · 개선한 AI 모델을 배포하면 'Built with Qwen' 을 표기하고, 'Qwen' 을 그 모델의 주 이름으로 쓰지 않는다.",
+            "url": "https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE"
+          },
+          "categories": [
+            "imageGenerate",
+            "imageEdit"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 8192,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        },
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/qwen-image-2-1/releases/download/v1.0.1/promboard.qwen-image-2-1-1.0.1.zip",
+          "bytes": 307758,
+          "sha256": "7727581aa2355cc87fff59fe1394b94ef857b72da513df19d0827ffa93ea479b",
           "permissions": {},
           "nonCommercial": true,
           "licenseNotice": {
