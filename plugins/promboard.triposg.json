@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "id": "promboard.triposg",
+  "name": "TripoSG — 이미지 → 3D 형상",
+  "description": "VAST-AI TripoSG(1.5B)로 물체 사진 한 장에서 3D 형상(메시)을 GLB 로 만든다. 색 · 재질 없이 모양만 만들며 날카로운 모서리와 얇은 부분을 잘 살린다. 배경은 BiRefNet(MIT)으로 지운다. NVIDIA 그래픽카드(CUDA) 전용.",
+  "author": "PromBoard",
+  "license": "MIT AND Apache-2.0",
+  "repository": "https://github.com/promboard-app/triposg",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "image-to-shape"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/triposg/releases/download/v1.0.0/promboard.triposg-1.0.0.zip",
+      "bytes": 396368,
+      "sha256": "4f4e5f0fd36848c1b70f6c2f665c3c3e212d6edc07f48098d2f63ea21902e326",
+      "permissions": {},
+      "licenseNotice": {
+        "excludedRegions": [
+          "EU"
+        ],
+        "conditions": "트랜스포머 코드 일부가 Tencent HunyuanDiT 에서 왔고 그 부분은 Tencent Hunyuan Community License(2024-05-14판)를 따른다. EU 에서는 쓸 수 없다. 다시 나눠 줄 때는 약관 사본과 Notice 문구를 함께 준다(이 플러그인은 그 파일 머리와 NOTICE 에 담았다). 약관의 사용 제한(Acceptable Use Policy)을 지키고 받는 사람에게도 알린다. 그 판 공개일에 월 이용자가 1억 명을 넘던 회사는 Tencent 의 허락을 따로 받아야 한다. TripoSG 모델 가중치는 MIT.",
+        "url": "https://github.com/Tencent/HunyuanDiT/blob/main/LICENSE.txt"
+      },
+      "categories": [
+        "model3d"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 8192,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "linux"
+      ]
+    }
+  ]
+}
