@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-24T16:09:15.354Z",
+  "generatedAt": "2026-10-25T00:59:49.327Z",
   "plugins": [
     {
       "schema": 1,
@@ -27,7 +27,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 3
     },
     {
       "schema": 1,
@@ -50,10 +50,17 @@
           "url": "https://github.com/promboard-app/room-acoustics/releases/download/v1.0.0/promboard.room-acoustics-1.0.0.zip",
           "bytes": 116401,
           "sha256": "732e884a706a3d70983c37014b8f4f7fa879cdc2ea400e18ae30b7fff62157b9"
+        },
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.2",
+          "url": "https://github.com/promboard-app/room-acoustics/releases/download/v1.0.1/promboard.room-acoustics-1.0.1.zip",
+          "bytes": 131862,
+          "sha256": "f569ae42ceec92c4efaabcc624b4394074867d05282d04842a8e94f9d2643889"
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 5
     },
     {
       "schema": 1,
@@ -77,7 +84,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 6
+      "downloads": 7
     },
     {
       "schema": 1,
@@ -114,7 +121,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 5
+      "downloads": 6
     }
   ]
 }
