@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "promboard.flux3-klein",
+  "name": "FLUX 3 Image Klein — 글로 만들기 · 참조 이미지로 고치기",
+  "description": "Black Forest Labs 의 FLUX 3 Image Klein 으로 프롬프트 글에서 이미지를 만들고, 참조 이미지(10장까지)를 이으면 고치거나 섞는다. 프롬프트 보강 모델(18.8GB)이 짧은 요청을 긴 장면 설명으로 바꾼다(그래픽카드 24GB 이상이면 자동으로 켬). 경량화 설정으로 판(증류판 · Base)과 정밀도(원본 bf16 · unsloth GGUF Q8 · Q4)를 고르고 고른 판만 받는다. 허깅페이스 승인 필요. FLUX Kommunity License(비상업 + 연매출 500만 달러 미만 결과물 상업 사용 · 콘텐츠 필터 의무). PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+  "author": "PromBoard",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/promboard-app/flux3-klein",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "generate"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/flux3-klein/releases/download/v1.0.0/promboard.flux3-klein-1.0.0.zip",
+      "bytes": 320275,
+      "sha256": "5cd1aa8f465798130e4b4f38d67a0db413d69c0968be788d2bdcb51cfd70515b",
+      "permissions": {},
+      "licenseNotice": {
+        "conditions": "FLUX Kommunity License v1.0: 비상업 목적으로 쓸 수 있고, 계열사를 합친 연매출이 500만 달러 미만인 사용자만 결과물을 상업적으로 쓸 수 있다(1.e · 2.a). 그 밖의 상업 사용(상업용 미세조정 · 배포 등)은 BFL 과 따로 계약한다. 결과물 상업 사용에는 콘텐츠 필터를 두거나 결과물을 공개 전에 검토하고, 법이 정하면 AI 생성 표시를 단다(2.e) — 이 플러그인에는 필터가 없다. 모델을 배포하면 Notice 문구를 둔다(3). 수출통제 · 제재법을 지킨다(4).",
+        "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein/blob/main/LICENSE.md"
+      },
+      "categories": [
+        "imageGenerate",
+        "imageEdit"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 8192,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
+    }
+  ]
+}
