@@ -33,6 +33,27 @@
         "mac",
         "linux"
       ]
+    },
+    {
+      "version": "1.0.2",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/qwen-image-edit-2511/releases/download/v1.0.2/promboard.qwen-image-edit-2511-1.0.2.zip",
+      "bytes": 301005,
+      "sha256": "d4fa9646fcfc7cc7fe9614ab04d585f955ad278e0e68bc87a34dd3d0b52310c9",
+      "permissions": {},
+      "categories": [
+        "imageEdit"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 20480,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
     }
   ]
 }
