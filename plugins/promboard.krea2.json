@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "id": "promboard.krea2",
+  "name": "Krea 2 — 글로 이미지 만들기 (Turbo · Raw)",
+  "description": "Krea 의 Krea 2(12.8B)로 프롬프트 글에서 이미지 한 장(PNG)을 만든다. Turbo 는 8단계로 빠르고, Raw 는 52단계 · 네거티브 프롬프트를 쓰는 증류하지 않은 판이다. 고른 판만 받는다 — 공통 9.4GB + 트랜스포머 26.3GB. 트랜스포머를 통째로 올리려면 그래픽카드 메모리 32GB(그보다 작으면 조각씩 올려 느리다). 허깅페이스 승인 필요. Krea 2 Community License(연매출 100만 달러 미만만 상업 · 콘텐츠 필터 의무). PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+  "author": "PromBoard",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/promboard-app/krea2",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "generate"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/krea2/releases/download/v1.0.0/promboard.krea2-1.0.0.zip",
+      "bytes": 299494,
+      "sha256": "7190322464fbe81cd2e271d85a55a73517170ec9e04076e1c4c2b3a851bbcabe",
+      "permissions": {},
+      "licenseNotice": {
+        "conditions": "Krea 2 Community License: 계열사를 합친 연매출이 100만 달러 미만일 때만 상업적으로 쓸 수 있다. 넘으면 Krea 와 엔터프라이즈 계약이 필요하다(2.3). 쓰는 쪽이 금지 · 유해 콘텐츠를 막는 콘텐츠 필터(분류기 · 검수 등)를 두어야 한다 — 이 플러그인에는 필터가 없다(4.2). 모델이나 그것을 담은 제품 · 서비스를 배포하면 약관 사본을 주고, AI 모델 이름은 'Krea' 로 시작하며, Notice 문구를 둔다(3.1). 미국 수출통제 · 제재법을 지킨다(4.1).",
+        "url": "https://github.com/krea-ai/krea-2/blob/db3984fbc6e13b34c0064990fc2d95ac64d00058/assets/hf_samples/LICENSE.pdf"
+      },
+      "categories": [
+        "imageGenerate"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 32768,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
+    }
+  ]
+}
