@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "id": "promboard.minimax-h3",
+  "name": "MiniMax-H3 — 소리까지 든 영상 만들기 (첫 · 끝 프레임 · 참조)",
+  "description": "MiniMax 의 MiniMax-H3 공개 모델(H3-Base 768p)로 프롬프트에서, 첫 · 끝 프레임에서, 또는 참조 그림 · 영상 · 소리를 읽어 5~10초 영상을 스테레오 소리까지 함께 만든다. 🔴 지역 제한: 라이선스가 EU · 영국 · 대한민국 · 미국에서의 사용 · 결과물 사용을 허락하지 않는다. 받기는 모드마다 약 144GB, 그래픽카드 12GB 이상(80GB 미만은 int8 로 줄여 RAM 에 약 75GB 를 둔다 — RAM 이 그보다 커야 한다). 아직 실제로 돌려 보지 않았다(검증 안 됨). NVIDIA 그래픽카드 전용.",
+  "author": "PromBoard",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/promboard-app/minimax-h3",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "minimax-h3"
+  ],
+  "versions": [
+    {
+      "version": "1.0.1",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/minimax-h3/releases/download/v1.0.1/promboard.minimax-h3-1.0.1.zip",
+      "bytes": 232502,
+      "sha256": "e7865b71267958a96c53e32a8f63c6b8238530bf8f88f2efb5b351a76285d644",
+      "permissions": {},
+      "licenseNotice": {
+        "excludedRegions": [
+          "EU",
+          "GB",
+          "KR",
+          "US"
+        ],
+        "conditions": "MiniMax H3 Community License: 허락 지역은 EU · 영국 · 대한민국 · 미국을 뺀 곳이고, 그 밖에서는 모델 · 결과물을 쓰거나 배포 · 표시할 수 없다. 상업 제품 · 서비스 매출이 연 2천만 달러를 넘으면 MiniMax 의 사전 서면 허락이 필요하고, 상업 제품 화면에 'MiniMax H3' 를 드러나게 표시해야 한다. 결과물로 다른 AI 모델을 개선할 수 없고, 제3자에게 생성 서비스를 하면 안전장치를 유지해야 하며, 안전장치를 우회하면 안 된다.",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE"
+      },
+      "categories": [
+        "videoAudio",
+        "videoGenerate"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 12288,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "linux"
+      ]
+    }
+  ]
+}
