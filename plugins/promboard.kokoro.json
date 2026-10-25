@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "id": "promboard.kokoro",
+  "name": "Kokoro-82M — 가벼운 프리셋 목소리 (영어 등 7개 언어)",
+  "description": "글을 읽어 목소리(WAV)로 만든다. hexgrad 공식 Kokoro-82M(82M, 약 0.36GB)의 프리셋 목소리 41개 중 하나를 고른다. 미국 · 영국 영어, 스페인어, 프랑스어, 힌디어, 이탈리아어, 브라질 포르투갈어를 읽는다. 한국어는 없고, 목소리 복제도 없다. 그래픽카드 없이 CPU 로도 빠르게 돈다. 모델은 Apache-2.0 이라 상업에도 쓸 수 있다.",
+  "author": "PromBoard",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/promboard-app/kokoro",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "kokoro"
+  ],
+  "versions": [
+    {
+      "version": "1.0.1",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/kokoro/releases/download/v1.0.1/promboard.kokoro-1.0.1.zip",
+      "bytes": 572291,
+      "sha256": "414d2bd2a3004478b42bf4e6b3955c5af96e615ff167cf408832f71b932de023",
+      "permissions": {},
+      "categories": [
+        "voice"
+      ],
+      "languages": [
+        "en-US",
+        "en-GB",
+        "es",
+        "fr",
+        "hi",
+        "it",
+        "pt-BR"
+      ],
+      "gpu": {
+        "vramMinMb": 0,
+        "cpuAllowed": true
+      },
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
+    }
+  ]
+}
