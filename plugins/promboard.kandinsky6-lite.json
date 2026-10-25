@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "id": "promboard.kandinsky6-lite",
+  "name": "Kandinsky 6.0 Lite — 소리까지 든 영상 만들기",
+  "description": "Kandinsky Lab 의 Kandinsky 6.0 Lite(3B) 공개 모델로 프롬프트에서, 또는 시작 프레임 그림에서 이어지는 5초 영상을 소리(44.1kHz, 입모양 맞춤)까지 함께 이 PC 에서 만든다. 기본은 10단계로 끝나는 빠른 판(받기 약 27GB)이고 50단계 일반 판(받기 약 28GB)도 고를 수 있다. RTX 4070 SUPER 12GB 실측: 기본 설정(SD 5초) 약 6분 40초, 그래픽카드 메모리 최대 9.9GiB. 프롬프트는 영어(또는 러시아어)로 자세히 쓸수록 잘 나온다 — 모델이 영어 · 러시아어로 배웠다. 라이선스 MIT(상업 사용 가능). NVIDIA 그래픽카드 전용.",
+  "author": "PromBoard",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/promboard-app/kandinsky6-lite",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "kandinsky6"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/kandinsky6-lite/releases/download/v1.0.0/promboard.kandinsky6-lite-1.0.0.zip",
+      "bytes": 217371,
+      "sha256": "ae70fe4c2adf5535fa19fb8cd337d74019cc41e9755cadfabb6e7edb56d6dfd5",
+      "permissions": {},
+      "categories": [
+        "videoAudio",
+        "videoGenerate"
+      ],
+      "gpu": {
+        "vramMinMb": 12288,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "linux"
+      ]
+    }
+  ]
+}
