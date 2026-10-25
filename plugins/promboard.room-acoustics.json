@@ -19,6 +19,13 @@
       "url": "https://github.com/promboard-app/room-acoustics/releases/download/v1.0.0/promboard.room-acoustics-1.0.0.zip",
       "bytes": 116401,
       "sha256": "732e884a706a3d70983c37014b8f4f7fa879cdc2ea400e18ae30b7fff62157b9"
+    },
+    {
+      "version": "1.0.1",
+      "app": ">=1.0.2",
+      "url": "https://github.com/promboard-app/room-acoustics/releases/download/v1.0.1/promboard.room-acoustics-1.0.1.zip",
+      "bytes": 131862,
+      "sha256": "f569ae42ceec92c4efaabcc624b4394074867d05282d04842a8e94f9d2643889"
     }
   ]
 }
