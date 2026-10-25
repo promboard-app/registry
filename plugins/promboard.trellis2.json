@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "promboard.trellis2",
   "name": "TRELLIS.2 — 이미지 → 재질 입힌 3D",
-  "description": "Microsoft TRELLIS.2(4B)로 물체 사진 한 장에서 PBR 재질(색 · 거칠기 · 금속성 · 투명도)이 입혀진 GLB 3D 모델을 만든다. 후속판 Pixal3D 도 고를 수 있다. 윈도우 전용 — trellis.cpp(C++ 실행 파일, MIT)를 GitHub 릴리스에서, GGUF 가중치를 Hugging Face 에서 받아 파이썬 · CUDA 컴파일 없이 돈다. NVIDIA 는 CUDA, AMD · 인텔은 Vulkan. 경량화(원본 f16 · GGUF Q8 · Q4)는 자동이면 그래픽카드 메모리로 고른다.",
+  "description": "Microsoft TRELLIS.2(4B)로 물체 사진 한 장에서 PBR 재질(색 · 거칠기 · 금속성 · 투명도)이 입혀진 GLB 3D 모델을 만든다. 후속판 Pixal3D 도 고를 수 있다. 윈도우 전용 — trellis.cpp 릴리스의 실행 파일(trellis-cli, sha256 고정, MIT)을 GitHub 에서, GGUF 가중치를 Hugging Face 에서 받아 파이썬 · CUDA 컴파일 없이 돈다. 앱이 플러그인에 거는 인터넷 차단은 이 실행 파일에는 걸리지 않는다. NVIDIA 는 CUDA, AMD · 인텔은 Vulkan. 경량화(원본 f16 · GGUF Q8 · Q4)는 자동이면 그래픽카드 메모리로 고른다.",
   "author": "PromBoard",
   "license": "Apache-2.0",
   "repository": "https://github.com/promboard-app/trellis2",
@@ -19,6 +19,28 @@
       "url": "https://github.com/promboard-app/trellis2/releases/download/v1.1.1/promboard.trellis2-1.1.1.zip",
       "bytes": 75414,
       "sha256": "e1498bf5751188bd265db3cdb7d5b57cbbed4b850e3eece3029ba839782a796c",
+      "permissions": {},
+      "licenseNotice": {
+        "conditions": "그림 인코더 DINOv3 는 Meta DINOv3 License 를 따른다(상업 이용 가능 · 무역 제재 대상과 군사 · 무기 · 첩보 용도 금지 · 다시 나눠 줄 때 약관 사본 동봉). Pixal3D 판은 코드 · 가중치 모두 MIT 지만, 원본 HF 저장소(TencentARC/Pixal3D)가 EU 접속을 막아 두었고 상업 · 지역 이용을 묻는 이슈 #33 에 아직 답이 없다.",
+        "url": "https://github.com/facebookresearch/dinov3/blob/main/LICENSE.md"
+      },
+      "categories": [
+        "model3d"
+      ],
+      "gpu": {
+        "vramMinMb": 4096,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win"
+      ]
+    },
+    {
+      "version": "1.1.2",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/trellis2/releases/download/v1.1.2/promboard.trellis2-1.1.2.zip",
+      "bytes": 76714,
+      "sha256": "ba5f4e6f313f76ee2b1ddb34d06f49e82819bd1ba618f2ab045ea43ec5913eeb",
       "permissions": {},
       "licenseNotice": {
         "conditions": "그림 인코더 DINOv3 는 Meta DINOv3 License 를 따른다(상업 이용 가능 · 무역 제재 대상과 군사 · 무기 · 첩보 용도 금지 · 다시 나눠 줄 때 약관 사본 동봉). Pixal3D 판은 코드 · 가중치 모두 MIT 지만, 원본 HF 저장소(TencentARC/Pixal3D)가 EU 접속을 막아 두었고 상업 · 지역 이용을 묻는 이슈 #33 에 아직 답이 없다.",
