@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T15:51:21.489Z",
+  "generatedAt": "2026-10-25T15:52:17.447Z",
   "plugins": [
     {
       "schema": 1,
@@ -655,7 +655,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 3
+      "downloads": 4
     },
     {
       "schema": 1,
@@ -921,7 +921,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 3
+      "downloads": 4
     },
     {
       "schema": 1,
@@ -1930,7 +1930,7 @@
       "schema": 1,
       "id": "promboard.seedvr2",
       "name": "SeedVR2 — 사진 · 영상 업스케일",
-      "description": "ByteDance SeedVR2 로 사진 · 영상을 2~4배 키우며 흐린 부분 · 잡티를 되살린다(한 단계 확산 복원). 사진은 투명 PNG 의 알파도 함께 키우고, 영상은 원본 소리를 그대로 담는다. 판은 3B(기본) · 7B 와 fp16 · fp8 · GGUF Q4 중에서 고르고 고른 판만 받는다. 12GB 그래픽카드는 3B · fp8 이 기본이고, 메모리가 모자라면 BlockSwap · VAE 타일을 스스로 켠다. 코드 · 가중치 모두 Apache-2.0.",
+      "description": "ByteDance SeedVR2 로 사진 · 영상을 2~4배 키우며 흐린 부분 · 잡티를 되살린다(한 단계 확산 복원). 사진은 투명 PNG 의 알파도 함께 키우고, 영상은 원본 소리를 그대로 담는다. 판은 3B · 7B 와 fp16 · fp8 · GGUF Q4 중에서 고르고 고른 판만 받는다. '자동'은 그래픽카드 8GB 이상이면 3B · fp8, 그 밖은 3B · GGUF Q4 를 고르고, 메모리가 모자라면 BlockSwap · VAE 타일을 스스로 켠다. 코드 · 가중치 모두 Apache-2.0.",
       "author": "PromBoard",
       "license": "Apache-2.0",
       "repository": "https://github.com/promboard-app/seedvr2",
@@ -1962,10 +1962,31 @@
             "mac",
             "linux"
           ]
+        },
+        {
+          "version": "1.0.3",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/seedvr2/releases/download/v1.0.3/promboard.seedvr2-1.0.3.zip",
+          "bytes": 1244507,
+          "sha256": "83d454c29a571cc46742689e08ca9bd5f42d26415008b32d2b987b6a5ec2e53a",
+          "permissions": {},
+          "categories": [
+            "upscale"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 6144,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 4
     },
     {
       "schema": 1,
