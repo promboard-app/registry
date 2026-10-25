@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "id": "promboard.magenta-rt",
+  "name": "Magenta RT 2 — 연주곡 만들기",
+  "description": "Google DeepMind Magenta RealTime 2 로 스타일 글(영어)에서 가사 없는 연주곡을 정한 길이만큼 한 번에 만든다. 판은 small(230M, 기본) · base(2.4B, 더 좋은 소리). 원본 JAX 판과 토큰 단위로 같다고 검증된 PyTorch 판(magenta-community)을 쓴다. 결과는 48kHz 스테레오 WAV. 가중치는 CC-BY-4.0 이라 출처를 표기한다.",
+  "author": "PromBoard",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/promboard-app/magenta-rt",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "music"
+  ],
+  "versions": [
+    {
+      "version": "1.0.1",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/magenta-rt/releases/download/v1.0.1/promboard.magenta-rt-1.0.1.zip",
+      "bytes": 377895,
+      "sha256": "b82fe4fc1db8bac7aadb4758f880309e8122f8481cb1abbcbc2ccc3d5b0eda9e",
+      "permissions": {},
+      "licenseNotice": {
+        "conditions": "가중치는 Google 의 CC-BY-4.0 이다 — 만든 곡이나 모델을 쓸 때 'Magenta RealTime 2 (Google DeepMind), CC-BY-4.0' 처럼 출처를 밝힌다. 남의 저작권 등 권리를 침해하는 결과물을 만들지 않는다(Google 이용 조건). 결과물에 대한 권리는 Google 이 주장하지 않는다.",
+        "url": "https://huggingface.co/google/magenta-realtime-2"
+      },
+      "categories": [
+        "music"
+      ],
+      "gpu": {
+        "vramMinMb": 2048,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
+    }
+  ]
+}
