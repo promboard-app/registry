@@ -33,6 +33,27 @@
         "win",
         "linux"
       ]
+    },
+    {
+      "version": "1.0.2",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/kandinsky6-pro/releases/download/v1.0.2/promboard.kandinsky6-pro-1.0.2.zip",
+      "bytes": 218622,
+      "sha256": "ff0aaff2968ed3fc13ed25ba1df8e6dacf3f5dd4b280e9fb0fb229bb2555e8e0",
+      "permissions": {},
+      "categories": [
+        "videoAudio",
+        "videoGenerate"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 16000,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "linux"
+      ]
     }
   ]
 }
