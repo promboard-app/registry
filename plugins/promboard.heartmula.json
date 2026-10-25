@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "id": "promboard.heartmula",
+  "name": "HeartMuLa — 가사로 노래 만들기",
+  "description": "HeartMuLa(3B, happy-new-year 판)로 가사와 스타일 태그에서 노래(목소리 + 반주)를 최대 4분까지 만든다. 가사는 [Verse] · [Chorus] 같은 구간 표시와 함께 줄마다 적고, 스타일은 쉼표로 이은 영어 낱말(장르 · 악기 · 분위기 · 목소리)로 적는다. 언어 태그에 한국어가 있다. HeartCodec(20260123)이 48kHz 스테레오로 바꾼다. 코드 · 가중치 모두 Apache-2.0.",
+  "author": "PromBoard",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/promboard-app/heartmula",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "song"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/heartmula/releases/download/v1.0.0/promboard.heartmula-1.0.0.zip",
+      "bytes": 806340,
+      "sha256": "e9491f0bad9e46acbb1a6130eb6254fe782b7497fc1333df24d65683b49cca87",
+      "permissions": {},
+      "categories": [
+        "music"
+      ],
+      "languages": [
+        "ko",
+        "en",
+        "zh",
+        "ja",
+        "es"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 12288,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
+    }
+  ]
+}
