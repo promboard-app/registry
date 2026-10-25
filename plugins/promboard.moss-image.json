@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "id": "promboard.moss-image",
+  "name": "MOSS-Image — 글로 이미지 만들기 (SFT · Base)",
+  "description": "OpenMOSS 의 MOSS-Image(5B)로 프롬프트 글에서 이미지 한 장(PNG)을 만든다. 자연어 · 태그 나열 · JSON 레이아웃(글자 자리 · 물체 배치)을 받고, 그림 속 글자(영어 · 중국어)를 잘 쓴다. 판은 SFT(기본) · Base 중 고르고 고른 판만 받는다 — 글 인코더 등 공통 17.1GB + 트랜스포머 10.2GB. 그래픽카드 메모리 12GB 이상(16GB 이상이면 빠르다). Apache-2.0. PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+  "author": "PromBoard",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/promboard-app/moss-image",
+  "contents": [
+    "nodes"
+  ],
+  "nodes": [
+    "generate"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/moss-image/releases/download/v1.0.0/promboard.moss-image-1.0.0.zip",
+      "bytes": 321582,
+      "sha256": "5b05f739b1fa29f2d0699f6ec8f7e402de05fe47c0b430eb2fbf8c638bf9fc43",
+      "permissions": {},
+      "categories": [
+        "imageGenerate"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 12288,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
+    }
+  ]
+}
