@@ -34,6 +34,28 @@
         "mac",
         "linux"
       ]
+    },
+    {
+      "version": "1.0.1",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/qwen-image-layered/releases/download/v1.0.1/promboard.qwen-image-layered-1.0.1.zip",
+      "bytes": 301506,
+      "sha256": "4765a9a3ec3a19b672343558fe88bf8c17b87b99b886fd4e25506ed9cb3f1280",
+      "permissions": {},
+      "categories": [
+        "imageEdit",
+        "objectMask"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 20480,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
     }
   ]
 }
