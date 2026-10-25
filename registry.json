@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T15:45:43.776Z",
+  "generatedAt": "2026-10-25T15:46:37.256Z",
   "plugins": [
     {
       "schema": 1,
@@ -343,6 +343,32 @@
           "url": "https://github.com/promboard-app/flux3-klein/releases/download/v1.0.0/promboard.flux3-klein-1.0.0.zip",
           "bytes": 320275,
           "sha256": "5cd1aa8f465798130e4b4f38d67a0db413d69c0968be788d2bdcb51cfd70515b",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "FLUX Kommunity License v1.0: 비상업 목적으로 쓸 수 있고, 계열사를 합친 연매출이 500만 달러 미만인 사용자만 결과물을 상업적으로 쓸 수 있다(1.e · 2.a). 그 밖의 상업 사용(상업용 미세조정 · 배포 등)은 BFL 과 따로 계약한다. 결과물 상업 사용에는 콘텐츠 필터를 두거나 결과물을 공개 전에 검토하고, 법이 정하면 AI 생성 표시를 단다(2.e) — 이 플러그인에는 필터가 없다. 모델을 배포하면 Notice 문구를 둔다(3). 수출통제 · 제재법을 지킨다(4).",
+            "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein/blob/main/LICENSE.md"
+          },
+          "categories": [
+            "imageGenerate",
+            "imageEdit"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 8192,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        },
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/flux3-klein/releases/download/v1.0.1/promboard.flux3-klein-1.0.1.zip",
+          "bytes": 321738,
+          "sha256": "2688d305c014ef1c0089cd864e565da0759b6da4376d48da9eaa5f8a8f85a719",
           "permissions": {},
           "licenseNotice": {
             "conditions": "FLUX Kommunity License v1.0: 비상업 목적으로 쓸 수 있고, 계열사를 합친 연매출이 500만 달러 미만인 사용자만 결과물을 상업적으로 쓸 수 있다(1.e · 2.a). 그 밖의 상업 사용(상업용 미세조정 · 배포 등)은 BFL 과 따로 계약한다. 결과물 상업 사용에는 콘텐츠 필터를 두거나 결과물을 공개 전에 검토하고, 법이 정하면 AI 생성 표시를 단다(2.e) — 이 플러그인에는 필터가 없다. 모델을 배포하면 Notice 문구를 둔다(3). 수출통제 · 제재법을 지킨다(4).",
