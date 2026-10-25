@@ -1,7 +1,1526 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T08:27:14.430Z",
+  "generatedAt": "2026-10-25T15:10:12.911Z",
   "plugins": [
+    {
+      "schema": 1,
+      "id": "promboard.fish-drama-3",
+      "name": "Drama 3 목소리 — Fish Audio 모델 · 여러 화자 장면",
+      "description": "글을 읽어 목소리 WAV(44.1kHz)를 만든다. 여러 화자가 나오는 장면 · 긴 글에 맞고, 화자마다 참조 목소리(+ 그 대사)를 이으면 그 목소리로 복제한다(참조 목소리 3명까지, 대본 화자는 16명까지). Fish Audio 의 오픈 모델 Drama 3(35B MoE, 41.5GB)를 공식 fish-speech 코드로 돌린다. 리눅스 · NVIDIA 그래픽카드(Ada · Hopper 이상, 약 48GB) 전용. 한국어 포함 83개 언어(카드 목록). 실측하지 않은 미검증 플러그인이다. Built with Fish Audio.",
+      "author": "PromBoard",
+      "license": "Apache-2.0 AND LicenseRef-Fish-Audio-Community-1.0",
+      "repository": "https://github.com/promboard-app/fish-drama-3",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "fish-drama-3"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/fish-drama-3/releases/download/v1.0.0/promboard.fish-drama-3-1.0.0.zip",
+          "bytes": 462625,
+          "sha256": "ce009dcee2ce1941a1447fd52010e30711f9e6062d9658b32f2167d2f016b08a",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "모델과 코드는 Fish Audio Community License v1.0. 연구 · 비상업은 무료. 상업 사용은 본인과 계열사의 연 매출이 50만 달러 미만일 때만 되고, 넘으면 Fish Audio 와 따로 계약한다. 이 모델로 남에게 음성 합성을 제공하는 호스팅 서비스(API · SaaS · TTS 앱)는 매출과 관계없이 별도 계약이 필요하다. 공개 · 배포할 때 'Built with Fish Audio' 를 눈에 띄게 표기한다. 결과물로 다른 음성 · 생성 모델을 학습 · 증류하지 않는다. 워터마크 등 출처 표시를 지우지 않는다. 동의 없이 실존 인물 목소리를 흉내 내지 않는다.",
+            "url": "https://huggingface.co/fishaudio/drama-3/blob/b2b5ee998034b2975720906c815e7fb0e9f007bd/LICENSE"
+          },
+          "categories": [
+            "voice"
+          ],
+          "languages": [
+            "zh",
+            "en",
+            "ja",
+            "ko",
+            "es",
+            "pt",
+            "ar",
+            "ru",
+            "fr",
+            "de",
+            "sv",
+            "it",
+            "tr",
+            "no",
+            "nl",
+            "cy",
+            "eu",
+            "ca",
+            "da",
+            "gl",
+            "ta",
+            "hu",
+            "fi",
+            "pl",
+            "et",
+            "hi",
+            "la",
+            "ur",
+            "th",
+            "vi",
+            "jw",
+            "bn",
+            "yo",
+            "sl",
+            "cs",
+            "sw",
+            "nn",
+            "he",
+            "ms",
+            "uk",
+            "id",
+            "kk",
+            "bg",
+            "lv",
+            "my",
+            "tl",
+            "sk",
+            "ne",
+            "fa",
+            "af",
+            "el",
+            "bo",
+            "hr",
+            "ro",
+            "sn",
+            "mi",
+            "yi",
+            "am",
+            "be",
+            "km",
+            "is",
+            "az",
+            "sd",
+            "br",
+            "sq",
+            "ps",
+            "mn",
+            "ht",
+            "ml",
+            "sr",
+            "sa",
+            "te",
+            "ka",
+            "bs",
+            "pa",
+            "lt",
+            "kn",
+            "si",
+            "hy",
+            "mr",
+            "as",
+            "gu",
+            "fo"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 49152,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.fish-s2-pro",
+      "name": "S2 Pro 목소리 — Fish Audio 모델 · 감정 태그 · 복제",
+      "description": "글을 읽어 목소리 WAV(44.1kHz)를 만든다. 글 안에 [whisper] · [laughing] 같은 자유 태그로 감정 · 말투를 바꾸고, 화자마다 참조 목소리(+ 그 대사)를 이으면 그 목소리로 복제한다(대본 화자 최대 4명, 참조 목소리는 3명까지). Fish Audio 의 오픈 모델 S2 Pro(11GB)를 공식 fish-speech 코드로 돌린다. 한국어 포함 83개 언어(카드 목록). 비상업 · 연구 전용(Fish Audio Research License). 실측하지 않은 미검증 플러그인이다. Built with Fish Audio.",
+      "author": "PromBoard",
+      "license": "Apache-2.0 AND LicenseRef-Fish-Audio-Community-1.0",
+      "repository": "https://github.com/promboard-app/fish-s2-pro",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "fish-s2-pro"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/fish-s2-pro/releases/download/v1.0.0/promboard.fish-s2-pro-1.0.0.zip",
+          "bytes": 611015,
+          "sha256": "5d1eb38303da2a8f4af473b1e07858fdd96ff3bf05dcf7005d85acb50faca41a",
+          "permissions": {},
+          "nonCommercial": true,
+          "licenseNotice": {
+            "conditions": "모델(S2 Pro)은 Fish Audio Research License — 연구 · 비상업 사용만 무료이고 상업 사용은 Fish Audio 와 따로 계약한다. 담아 온 fish-speech 코드는 Fish Audio Community License v1.0(연 매출 50만 달러 미만 상업 가능, 호스팅 서비스는 별도 계약). 동의 없이 실존 인물 목소리를 흉내 내지 않는다. 결과물로 다른 음성 모델을 학습 · 증류하지 않는다. Built with Fish Audio — 공개할 때 표기한다.",
+            "url": "https://huggingface.co/fishaudio/s2-pro/blob/1de9996b6be38b745688de084d87a5633f714e4e/LICENSE.md"
+          },
+          "categories": [
+            "voice"
+          ],
+          "languages": [
+            "zh",
+            "en",
+            "ja",
+            "ko",
+            "es",
+            "pt",
+            "ar",
+            "ru",
+            "fr",
+            "de",
+            "sv",
+            "it",
+            "tr",
+            "no",
+            "nl",
+            "cy",
+            "eu",
+            "ca",
+            "da",
+            "gl",
+            "ta",
+            "hu",
+            "fi",
+            "pl",
+            "et",
+            "hi",
+            "la",
+            "ur",
+            "th",
+            "vi",
+            "jw",
+            "bn",
+            "yo",
+            "sl",
+            "cs",
+            "sw",
+            "nn",
+            "he",
+            "ms",
+            "uk",
+            "id",
+            "kk",
+            "bg",
+            "lv",
+            "my",
+            "tl",
+            "sk",
+            "ne",
+            "fa",
+            "af",
+            "el",
+            "bo",
+            "hr",
+            "ro",
+            "sn",
+            "mi",
+            "yi",
+            "am",
+            "be",
+            "km",
+            "is",
+            "az",
+            "sd",
+            "br",
+            "sq",
+            "ps",
+            "mn",
+            "ht",
+            "ml",
+            "sr",
+            "sa",
+            "te",
+            "ka",
+            "bs",
+            "pa",
+            "lt",
+            "kn",
+            "si",
+            "hy",
+            "mr",
+            "as",
+            "gu",
+            "fo"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 12288,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 3
+    },
+    {
+      "schema": 1,
+      "id": "promboard.flux2-klein",
+      "name": "FLUX.2 [klein] 4B — 글로 만들기 · 참조 이미지로 고치기",
+      "description": "Black Forest Labs 의 FLUX.2 [klein] 4B 로 프롬프트 글에서 이미지를 만들고, 참조 이미지(4장까지)를 이으면 그 이미지를 고치거나 섞는다. 증류판은 4단계로 빠르고 Base 는 결과가 더 다양하다. 경량화 설정으로 판과 정밀도(원본 bf16 · unsloth GGUF Q8 · Q4)를 고르고 고른 판만 받는다 — 공통 파일 8.2GB + 트랜스포머 2.6~7.8GB. 그래픽카드 메모리 6GB 이상. Apache-2.0. PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/flux2-klein",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "generate"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/flux2-klein/releases/download/v1.0.0/promboard.flux2-klein-1.0.0.zip",
+          "bytes": 302015,
+          "sha256": "a553ad0947a35bf161aa67bd898e75f7268e0e473d18daa85656e7891bca7503",
+          "permissions": {},
+          "categories": [
+            "imageGenerate",
+            "imageEdit"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 6144,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.flux3-klein",
+      "name": "FLUX 3 Image Klein — 글로 만들기 · 참조 이미지로 고치기",
+      "description": "Black Forest Labs 의 FLUX 3 Image Klein 으로 프롬프트 글에서 이미지를 만들고, 참조 이미지(10장까지)를 이으면 고치거나 섞는다. 프롬프트 보강 모델(18.8GB)이 짧은 요청을 긴 장면 설명으로 바꾼다(그래픽카드 24GB 이상이면 자동으로 켬). 경량화 설정으로 판(증류판 · Base)과 정밀도(원본 bf16 · unsloth GGUF Q8 · Q4)를 고르고 고른 판만 받는다. 허깅페이스 승인 필요. FLUX Kommunity License(비상업 + 연매출 500만 달러 미만 결과물 상업 사용 · 콘텐츠 필터 의무). PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/flux3-klein",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "generate"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/flux3-klein/releases/download/v1.0.0/promboard.flux3-klein-1.0.0.zip",
+          "bytes": 320275,
+          "sha256": "5cd1aa8f465798130e4b4f38d67a0db413d69c0968be788d2bdcb51cfd70515b",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "FLUX Kommunity License v1.0: 비상업 목적으로 쓸 수 있고, 계열사를 합친 연매출이 500만 달러 미만인 사용자만 결과물을 상업적으로 쓸 수 있다(1.e · 2.a). 그 밖의 상업 사용(상업용 미세조정 · 배포 등)은 BFL 과 따로 계약한다. 결과물 상업 사용에는 콘텐츠 필터를 두거나 결과물을 공개 전에 검토하고, 법이 정하면 AI 생성 표시를 단다(2.e) — 이 플러그인에는 필터가 없다. 모델을 배포하면 Notice 문구를 둔다(3). 수출통제 · 제재법을 지킨다(4).",
+            "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein/blob/main/LICENSE.md"
+          },
+          "categories": [
+            "imageGenerate",
+            "imageEdit"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 8192,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.heartmula",
+      "name": "HeartMuLa — 가사로 노래 만들기",
+      "description": "HeartMuLa(3B, happy-new-year 판)로 가사와 스타일 태그에서 노래(목소리 + 반주)를 최대 4분까지 만든다. 가사는 [Verse] · [Chorus] 같은 구간 표시와 함께 줄마다 적고, 스타일은 쉼표로 이은 영어 낱말(장르 · 악기 · 분위기 · 목소리)로 적는다. 언어 태그에 한국어가 있다. HeartCodec(20260123)이 48kHz 스테레오로 바꾼다. 코드 · 가중치 모두 Apache-2.0.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/heartmula",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "song"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/heartmula/releases/download/v1.0.0/promboard.heartmula-1.0.0.zip",
+          "bytes": 806340,
+          "sha256": "e9491f0bad9e46acbb1a6130eb6254fe782b7497fc1333df24d65683b49cca87",
+          "permissions": {},
+          "categories": [
+            "music"
+          ],
+          "languages": [
+            "ko",
+            "en",
+            "zh",
+            "ja",
+            "es"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 12288,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.kandinsky6-lite",
+      "name": "Kandinsky 6.0 Lite — 소리까지 든 영상 만들기",
+      "description": "Kandinsky Lab 의 Kandinsky 6.0 Lite(3B) 공개 모델로 프롬프트에서, 또는 시작 프레임 그림에서 이어지는 5초 영상을 소리(44.1kHz, 입모양 맞춤)까지 함께 이 PC 에서 만든다. 기본은 10단계로 끝나는 빠른 판(받기 약 27GB)이고 50단계 일반 판(받기 약 28GB)도 고를 수 있다. RTX 4070 SUPER 12GB 실측: 기본 설정(SD 5초) 약 6분 40초, 그래픽카드 메모리 최대 9.9GiB. 프롬프트는 영어(또는 러시아어)로 자세히 쓸수록 잘 나온다 — 모델이 영어 · 러시아어로 배웠다. 라이선스 MIT(상업 사용 가능). NVIDIA 그래픽카드 전용.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/kandinsky6-lite",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "kandinsky6"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/kandinsky6-lite/releases/download/v1.0.0/promboard.kandinsky6-lite-1.0.0.zip",
+          "bytes": 217371,
+          "sha256": "ae70fe4c2adf5535fa19fb8cd337d74019cc41e9755cadfabb6e7edb56d6dfd5",
+          "permissions": {},
+          "categories": [
+            "videoAudio",
+            "videoGenerate"
+          ],
+          "gpu": {
+            "vramMinMb": 12288,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.kandinsky6-pro",
+      "name": "Kandinsky 6.0 Pro — 소리까지 든 영상 만들기 (29B)",
+      "description": "Kandinsky Lab 의 Kandinsky 6.0 Pro(29B) 공개 모델로 프롬프트에서, 또는 시작 프레임 그림에서 이어지는 5초 영상을 소리(44.1kHz, 입모양 맞춤)까지 함께 만든다. Lite 보다 화질 · 움직임이 낫고 훨씬 무겁다: 받기 약 81GB(빠른 판) · 90GB(일반 판), RAM 64GB 이상(공식 16GB 프리셋이 호스트 RAM 약 58GiB 사용), 그래픽카드 16GB 이상. 일반 판은 허깅페이스 사용 승인이 필요하다. 아직 실제로 돌려 보지 않았다(검증 안 됨). 프롬프트는 영어(또는 러시아어)로 자세히. 라이선스 MIT. NVIDIA 그래픽카드 전용.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/kandinsky6-pro",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "kandinsky6"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/kandinsky6-pro/releases/download/v1.0.1/promboard.kandinsky6-pro-1.0.1.zip",
+          "bytes": 217593,
+          "sha256": "5fabd8d0dfb7eba88f137aaef2d7af761ed78535f81eba40546c8bbdc3a1cd8f",
+          "permissions": {},
+          "categories": [
+            "videoAudio",
+            "videoGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 16000,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.kokoro",
+      "name": "Kokoro-82M — 가벼운 프리셋 목소리 (영어 등 7개 언어)",
+      "description": "글을 읽어 목소리(WAV)로 만든다. hexgrad 공식 Kokoro-82M(82M, 약 0.36GB)의 프리셋 목소리 41개 중 하나를 고른다. 미국 · 영국 영어, 스페인어, 프랑스어, 힌디어, 이탈리아어, 브라질 포르투갈어를 읽는다. 한국어는 없고, 목소리 복제도 없다. 그래픽카드 없이 CPU 로도 빠르게 돈다. 모델은 Apache-2.0 이라 상업에도 쓸 수 있다.",
+      "author": "PromBoard",
+      "license": "GPL-3.0-or-later",
+      "repository": "https://github.com/promboard-app/kokoro",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "kokoro"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/kokoro/releases/download/v1.0.1/promboard.kokoro-1.0.1.zip",
+          "bytes": 572291,
+          "sha256": "414d2bd2a3004478b42bf4e6b3955c5af96e615ff167cf408832f71b932de023",
+          "permissions": {},
+          "categories": [
+            "voice"
+          ],
+          "languages": [
+            "en-US",
+            "en-GB",
+            "es",
+            "fr",
+            "hi",
+            "it",
+            "pt-BR"
+          ],
+          "gpu": {
+            "vramMinMb": 0,
+            "cpuAllowed": true
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.krea2",
+      "name": "Krea 2 — 글로 이미지 만들기 (Turbo · Raw)",
+      "description": "Krea 의 Krea 2(12.8B)로 프롬프트 글에서 이미지 한 장(PNG)을 만든다. Turbo 는 8단계로 빠르고, Raw 는 52단계 · 네거티브 프롬프트를 쓰는 증류하지 않은 판이다. 고른 판만 받는다 — 공통 9.4GB + 트랜스포머 26.3GB. 트랜스포머를 통째로 올리려면 그래픽카드 메모리 32GB(그보다 작으면 조각씩 올려 느리다). 허깅페이스 승인 필요. Krea 2 Community License(연매출 100만 달러 미만만 상업 · 콘텐츠 필터 의무). PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/krea2",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "generate"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/krea2/releases/download/v1.0.0/promboard.krea2-1.0.0.zip",
+          "bytes": 299494,
+          "sha256": "7190322464fbe81cd2e271d85a55a73517170ec9e04076e1c4c2b3a851bbcabe",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "Krea 2 Community License: 계열사를 합친 연매출이 100만 달러 미만일 때만 상업적으로 쓸 수 있다. 넘으면 Krea 와 엔터프라이즈 계약이 필요하다(2.3). 쓰는 쪽이 금지 · 유해 콘텐츠를 막는 콘텐츠 필터(분류기 · 검수 등)를 두어야 한다 — 이 플러그인에는 필터가 없다(4.2). 모델이나 그것을 담은 제품 · 서비스를 배포하면 약관 사본을 주고, AI 모델 이름은 'Krea' 로 시작하며, Notice 문구를 둔다(3.1). 미국 수출통제 · 제재법을 지킨다(4.1).",
+            "url": "https://github.com/krea-ai/krea-2/blob/db3984fbc6e13b34c0064990fc2d95ac64d00058/assets/hf_samples/LICENSE.pdf"
+          },
+          "categories": [
+            "imageGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 32768,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.ltx25",
+      "name": "LTX-2.5 — 소리까지 든 영상 만들기 (첫 · 끝 프레임)",
+      "description": "Lightricks 의 LTX-2.5(22B) 공개 모델로 프롬프트에서, 첫 프레임에서, 또는 첫 · 끝 프레임 사이를 잇는 영상을 소리까지 함께 만든다. 길이는 '자동'이면 모델이 프롬프트에 맞춰 정한다. 모델 '자동'은 RAM 96GB 이상이면 원본(받기 약 70GB), 그 밖은 GGUF Q4(받기 약 46GB, 무게를 RAM 에 둔다)를 고른다(허깅페이스 사용 승인 필요). 아직 실제로 돌려 보지 않았다(검증 안 됨). 라이선스 LTX-2.x Community License — 연매출 1천만 달러 이상이면 유료 계약, Lightricks 제품과 경쟁하는 제품은 별도 라이선스. NVIDIA 그래픽카드 전용.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/ltx25",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "ltx25"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/ltx25/releases/download/v1.0.1/promboard.ltx25-1.0.1.zip",
+          "bytes": 224000,
+          "sha256": "4bb84eb96c47f2f002aea7fe280fab1f862e7290cef3ccd9b94f014f4d48414a",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "LTX-2.x Community License: 계열사를 합친 연매출이 1천만 달러 이상인 회사는 비상업 목적 밖의 모든 사용에 Lightricks 와 유료 계약이 필요하다. Lightricks 의 상업 제품 · 서비스와 직접 경쟁하거나 대체하는 제품에 쓰려면 별도 상용 라이선스가 필요하다(부속서 A 20번). 안전장치 · 필터 · 워터마크 · 출처 표시를 우회하거나 끄면 안 되고(19번), 상업 목적으로 다른 AI 모델을 학습 · 개선하는 데 쓸 수 없다(18번). 미국 포괄 제재 지역 거주자는 쓸 수 없다(7장).",
+            "url": "https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x"
+          },
+          "categories": [
+            "videoAudio",
+            "videoGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 16384,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.magenta-rt",
+      "name": "Magenta RT 2 — 연주곡 만들기",
+      "description": "Google DeepMind Magenta RealTime 2 로 스타일 글(영어)에서 가사 없는 연주곡을 정한 길이만큼 한 번에 만든다. 판은 small(230M, 기본) · base(2.4B, 더 좋은 소리). 원본 JAX 판과 토큰 단위로 같다고 검증된 PyTorch 판(magenta-community)을 쓴다. 결과는 48kHz 스테레오 WAV. 가중치는 CC-BY-4.0 이라 출처를 표기한다.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/magenta-rt",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "music"
+      ],
+      "versions": [
+        {
+          "version": "1.0.2",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/magenta-rt/releases/download/v1.0.2/promboard.magenta-rt-1.0.2.zip",
+          "bytes": 378352,
+          "sha256": "16a4136fdb14c0fc2424dfda3f752f5e4694da5866d7f54aaeb34220dafcce3f",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "가중치는 Google 의 CC-BY-4.0 이다 — 만든 곡이나 모델을 쓸 때 'Magenta RealTime 2 (Google DeepMind), CC-BY-4.0' 처럼 출처를 밝힌다. 남의 저작권 등 권리를 침해하는 결과물을 만들지 않는다(Google 이용 조건). 결과물에 대한 권리는 Google 이 주장하지 않는다.",
+            "url": "https://huggingface.co/google/magenta-realtime-2"
+          },
+          "categories": [
+            "music"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 2048,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.maya1",
+      "name": "Maya1 — 글로 목소리 설계 · 감정 태그 (영어)",
+      "description": "목소리를 영어 설명 글(성별 · 나이 · 억양 · 음높이 · 음색 · 말투)로 정하고 글을 읽어 목소리(WAV)를 만든다. 읽을 글 안에 <laugh> · <sigh> · <whisper> · <cry> 같은 감정 태그 17가지를 넣을 수 있다. 영어 전용이고 한국어 · 목소리 복제는 없다. 모델은 maya-research 공식 Maya1(3.3B, bf16 6.7GB)과 SNAC 24kHz 디코더를 허깅페이스에서 받는다. 그래픽카드가 필요하다. 모델은 Apache-2.0 이라 상업에도 쓸 수 있다.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/maya1",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "maya1"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/maya1/releases/download/v1.0.1/promboard.maya1-1.0.1.zip",
+          "bytes": 280670,
+          "sha256": "58766b4508fc8028c1c58a91147c9780aee90390e2b32470dccd673f2dac3eeb",
+          "permissions": {},
+          "categories": [
+            "voice"
+          ],
+          "languages": [
+            "en"
+          ],
+          "gpu": {
+            "vramMinMb": 9000,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.minimax-h3",
+      "name": "MiniMax-H3 — 소리까지 든 영상 만들기 (첫 · 끝 프레임 · 참조)",
+      "description": "MiniMax 의 MiniMax-H3 공개 모델(H3-Base 768p)로 프롬프트에서, 첫 · 끝 프레임에서, 또는 참조 그림 · 영상 · 소리를 읽어 5~10초 영상을 스테레오 소리까지 함께 만든다. 🔴 지역 제한: 라이선스가 EU · 영국 · 대한민국 · 미국에서의 사용 · 결과물 사용을 허락하지 않는다. 받기는 모드마다 약 144GB, 그래픽카드 12GB 이상(80GB 미만은 int8 로 줄여 RAM 에 약 75GB 를 둔다 — RAM 이 그보다 커야 한다). 아직 실제로 돌려 보지 않았다(검증 안 됨). NVIDIA 그래픽카드 전용.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/minimax-h3",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "minimax-h3"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/minimax-h3/releases/download/v1.0.1/promboard.minimax-h3-1.0.1.zip",
+          "bytes": 232502,
+          "sha256": "e7865b71267958a96c53e32a8f63c6b8238530bf8f88f2efb5b351a76285d644",
+          "permissions": {},
+          "licenseNotice": {
+            "excludedRegions": [
+              "EU",
+              "GB",
+              "KR",
+              "US"
+            ],
+            "conditions": "MiniMax H3 Community License: 허락 지역은 EU · 영국 · 대한민국 · 미국을 뺀 곳이고, 그 밖에서는 모델 · 결과물을 쓰거나 배포 · 표시할 수 없다. 상업 제품 · 서비스 매출이 연 2천만 달러를 넘으면 MiniMax 의 사전 서면 허락이 필요하고, 상업 제품 화면에 'MiniMax H3' 를 드러나게 표시해야 한다. 결과물로 다른 AI 모델을 개선할 수 없고, 제3자에게 생성 서비스를 하면 안전장치를 유지해야 하며, 안전장치를 우회하면 안 된다.",
+            "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE"
+          },
+          "categories": [
+            "videoAudio",
+            "videoGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 12288,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.moss-image",
+      "name": "MOSS-Image — 글로 이미지 만들기 (SFT · Base)",
+      "description": "OpenMOSS 의 MOSS-Image(5B)로 프롬프트 글에서 이미지 한 장(PNG)을 만든다. 자연어 · 태그 나열 · JSON 레이아웃(글자 자리 · 물체 배치)을 받고, 그림 속 글자(영어 · 중국어)를 잘 쓴다. 판은 SFT(기본) · Base 중 고르고 고른 판만 받는다 — 글 인코더 등 공통 17.1GB + 트랜스포머 10.2GB. 그래픽카드 메모리 12GB 이상(16GB 이상이면 빠르다). Apache-2.0. PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/moss-image",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "generate"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/moss-image/releases/download/v1.0.0/promboard.moss-image-1.0.0.zip",
+          "bytes": 321582,
+          "sha256": "5b05f739b1fa29f2d0699f6ec8f7e402de05fe47c0b430eb2fbf8c638bf9fc43",
+          "permissions": {},
+          "categories": [
+            "imageGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 12288,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.omnivoice",
+      "name": "OmniVoice — 목소리 복제 · 속성으로 목소리 만들기",
+      "description": "글을 읽어 목소리(WAV)로 만든다. 참조 목소리 몇 초를 이으면 그 목소리로 읽고(복제), 참조 없이 성별 · 나이 · 음높이 · 속삭임 · 영어 억양을 고르면 그 속성의 목소리를 만든다. 한국어를 포함한 600여 개 언어를 읽는다. 모델은 k2-fsa 공식 OmniVoice(0.6B, 3.3GB)를 허깅페이스에서 받는다. 모델은 비상업(CC-BY-NC)이고, 소리 토크나이저는 Boson Higgs Audio 2 Community License 를 따른다. 허락 없는 목소리 복제 · 사칭은 금지다.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/omnivoice",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "omnivoice"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/omnivoice/releases/download/v1.0.1/promboard.omnivoice-1.0.1.zip",
+          "bytes": 305832,
+          "sha256": "764c0713f8a74fcdb9fb1f7514fcdbfb56d65923c7f3d6e612d3e5b06c5e2def",
+          "permissions": {},
+          "nonCommercial": true,
+          "licenseNotice": {
+            "conditions": "모델 가중치는 CC-BY-NC(비상업, 학습 데이터 Emilia 제약). 소리 토크나이저는 Boson Higgs Audio 2 Community License(Llama 3 기반): 배포 · 서비스에 쓰면 'Built with Higgs Materials licensed from Boson AI' 표기, 연간 사용자 10만 명 초과는 Boson 의 별도 허가, 결과물로 다른 대형 언어 모델 개선 금지. 허락 없는 목소리 복제 · 사칭 · 사기에 쓰지 않는다(공식 고지).",
+            "url": "https://huggingface.co/k2-fsa/OmniVoice/blob/main/audio_tokenizer/LICENSE"
+          },
+          "categories": [
+            "voice"
+          ],
+          "languages": [
+            "ko",
+            "en",
+            "ja",
+            "zh",
+            "yue",
+            "aae",
+            "aal",
+            "aao",
+            "ab",
+            "abb",
+            "abn",
+            "abr",
+            "abs",
+            "abv",
+            "acm",
+            "acw",
+            "acx",
+            "adf",
+            "adx",
+            "ady",
+            "aeb",
+            "aec",
+            "af",
+            "afb",
+            "afo",
+            "ahl",
+            "ahs",
+            "ajg",
+            "aju",
+            "ala",
+            "aln",
+            "alo",
+            "am",
+            "amu",
+            "an",
+            "anc",
+            "ank",
+            "anp",
+            "anw",
+            "aom",
+            "apc",
+            "apd",
+            "arb",
+            "arq",
+            "ars",
+            "ary",
+            "arz",
+            "as",
+            "ast",
+            "avl",
+            "awo",
+            "ayl",
+            "ayp",
+            "az",
+            "ba",
+            "bag",
+            "bas",
+            "bax",
+            "bba",
+            "bbj",
+            "bbl",
+            "bbu",
+            "bce",
+            "bci",
+            "bcs",
+            "bcy",
+            "bda",
+            "bde",
+            "bdm",
+            "be",
+            "beb",
+            "bew",
+            "bfd",
+            "bft",
+            "bg",
+            "bgp",
+            "bhb",
+            "bhh",
+            "bho",
+            "bhp",
+            "bhr",
+            "bjj",
+            "bjk",
+            "bjn",
+            "bjt",
+            "bkh",
+            "bkm",
+            "bky",
+            "bmm",
+            "bmq",
+            "bn",
+            "bnm",
+            "bnn",
+            "bns",
+            "bo",
+            "bou",
+            "bqg",
+            "br",
+            "bra",
+            "brh",
+            "bri",
+            "brx",
+            "bs",
+            "bsh",
+            "bsj",
+            "bsk",
+            "btm",
+            "btv",
+            "bug",
+            "bum",
+            "buo",
+            "bux",
+            "bwr",
+            "bxf",
+            "byc",
+            "bys",
+            "byv",
+            "byx",
+            "bzc",
+            "bzw",
+            "ca",
+            "ccg",
+            "ceb",
+            "cen",
+            "cfa",
+            "cgg",
+            "chq",
+            "cjk",
+            "ckb",
+            "ckl",
+            "ckr",
+            "cky",
+            "cnh",
+            "cpy",
+            "cs",
+            "cte",
+            "ctl",
+            "cut",
+            "cux",
+            "cv",
+            "cy",
+            "da",
+            "dag",
+            "dar",
+            "dav",
+            "dbd",
+            "dcc",
+            "de",
+            "deg",
+            "dgh",
+            "dgo",
+            "dje",
+            "dmk",
+            "dml",
+            "dru",
+            "dty",
+            "dua",
+            "dv",
+            "dyu",
+            "dzg",
+            "ebr",
+            "ebu",
+            "ego",
+            "eiv",
+            "eko",
+            "ekr",
+            "el",
+            "elm",
+            "eo",
+            "es",
+            "esu",
+            "et",
+            "eto",
+            "ets",
+            "etu",
+            "eu",
+            "ewo",
+            "ext",
+            "eyo",
+            "fa",
+            "fan",
+            "fat",
+            "ff",
+            "ffm",
+            "fi",
+            "fia",
+            "fil",
+            "fip",
+            "fkk",
+            "fmp",
+            "fr",
+            "fub",
+            "fuc",
+            "fue",
+            "fuf",
+            "fuh",
+            "fui",
+            "fuq",
+            "fuv",
+            "fy",
+            "ga",
+            "gbm",
+            "gbr",
+            "gby",
+            "gcc",
+            "gdf",
+            "gej",
+            "ges",
+            "ggg",
+            "gid",
+            "gig",
+            "giz",
+            "gjk",
+            "gju",
+            "gl",
+            "glw",
+            "gn",
+            "gol",
+            "gom",
+            "gsl",
+            "gu",
+            "gui",
+            "gur",
+            "guz",
+            "gv",
+            "gwc",
+            "gwe",
+            "gwt",
+            "gya",
+            "gyz",
+            "ha",
+            "hah",
+            "hao",
+            "haw",
+            "haz",
+            "hbb",
+            "he",
+            "hem",
+            "hi",
+            "hia",
+            "hkk",
+            "hla",
+            "hno",
+            "hoj",
+            "hr",
+            "hsb",
+            "ht",
+            "hu",
+            "hue",
+            "hul",
+            "hux",
+            "hwo",
+            "hy",
+            "hz",
+            "ia",
+            "ibb",
+            "id",
+            "ida",
+            "idu",
+            "ig",
+            "ijc",
+            "ijn",
+            "ik",
+            "ikw",
+            "is",
+            "ish",
+            "iso",
+            "it",
+            "its",
+            "itw",
+            "itz",
+            "jal",
+            "jax",
+            "jgo",
+            "jmx",
+            "jns",
+            "jqr",
+            "juk",
+            "juo",
+            "jv",
+            "ka",
+            "kab",
+            "kai",
+            "kaj",
+            "kam",
+            "kbd",
+            "kbl",
+            "kbt",
+            "kcq",
+            "kdh",
+            "kea",
+            "keu",
+            "kfe",
+            "kfk",
+            "kfp",
+            "khg",
+            "khw",
+            "kj",
+            "kjc",
+            "kjk",
+            "kk",
+            "kln",
+            "kls",
+            "km",
+            "kmr",
+            "kmy",
+            "kn",
+            "kna",
+            "knn",
+            "kol",
+            "koo",
+            "kpo",
+            "kqo",
+            "ks",
+            "ksd",
+            "ksf",
+            "kto",
+            "kuh",
+            "kvx",
+            "kw",
+            "kwm",
+            "kxp",
+            "ky",
+            "kyx",
+            "lag",
+            "lb",
+            "lcm",
+            "ldb",
+            "lg",
+            "lij",
+            "lir",
+            "lkb",
+            "lla",
+            "ln",
+            "lnu",
+            "lo",
+            "loa",
+            "lrk",
+            "lss",
+            "lt",
+            "ltg",
+            "lto",
+            "lua",
+            "luo",
+            "lus",
+            "lv",
+            "lwg",
+            "mab",
+            "maf",
+            "mai",
+            "mau",
+            "max",
+            "mbo",
+            "mcf",
+            "mcn",
+            "mcx",
+            "mdd",
+            "mde",
+            "mdf",
+            "mek",
+            "mer",
+            "meu",
+            "mfm",
+            "mfn",
+            "mfo",
+            "mfv",
+            "mgg",
+            "mgi",
+            "mhk",
+            "mhr",
+            "mi",
+            "mig",
+            "miu",
+            "mk",
+            "mkf",
+            "mki",
+            "ml",
+            "mlq",
+            "mn",
+            "mne",
+            "mni",
+            "mqy",
+            "mr",
+            "mrj",
+            "mrr",
+            "mrt",
+            "ms",
+            "mse",
+            "msh",
+            "msw",
+            "mt",
+            "mtr",
+            "mtu",
+            "mtx",
+            "mua",
+            "mug",
+            "mui",
+            "mve",
+            "mvy",
+            "mxs",
+            "mxu",
+            "mxy",
+            "my",
+            "myv",
+            "mzl",
+            "nal",
+            "nan",
+            "nap",
+            "nb",
+            "nbh",
+            "ncf",
+            "nco",
+            "ncx",
+            "ndi",
+            "ng",
+            "ngi",
+            "nhg",
+            "nhi",
+            "nhn",
+            "nhq",
+            "nja",
+            "nl",
+            "nla",
+            "nlv",
+            "nmg",
+            "nmz",
+            "nn",
+            "nnh",
+            "no",
+            "noe",
+            "npi",
+            "nso",
+            "ny",
+            "nyu",
+            "oc",
+            "odk",
+            "odu",
+            "ogo",
+            "om",
+            "orc",
+            "oru",
+            "ory",
+            "os",
+            "pa",
+            "pbs",
+            "pbt",
+            "pbu",
+            "pcm",
+            "pex",
+            "phl",
+            "phr",
+            "pip",
+            "piy",
+            "pko",
+            "pl",
+            "plk",
+            "plt",
+            "pmq",
+            "pms",
+            "pmy",
+            "pnb",
+            "poc",
+            "poe",
+            "pow",
+            "prq",
+            "ps",
+            "pst",
+            "pt",
+            "pua",
+            "pwn",
+            "qug",
+            "qum",
+            "qup",
+            "qur",
+            "qus",
+            "quv",
+            "qux",
+            "quy",
+            "qva",
+            "qvi",
+            "qvj",
+            "qvl",
+            "qwa",
+            "qws",
+            "qxa",
+            "qxp",
+            "qxt",
+            "qxu",
+            "qxw",
+            "rag",
+            "rm",
+            "ro",
+            "rob",
+            "rof",
+            "roo",
+            "rth",
+            "ru",
+            "rup",
+            "rw",
+            "sa",
+            "sah",
+            "sat",
+            "sau",
+            "say",
+            "sbn",
+            "sc",
+            "scl",
+            "scn",
+            "sd",
+            "sei",
+            "shu",
+            "si",
+            "sip",
+            "siw",
+            "sjr",
+            "sk",
+            "skg",
+            "skr",
+            "sl",
+            "sn",
+            "snc",
+            "snk",
+            "so",
+            "sol",
+            "sps",
+            "sq",
+            "sr",
+            "src",
+            "sro",
+            "ssi",
+            "ste",
+            "sua",
+            "sv",
+            "sva",
+            "sw",
+            "szy",
+            "ta",
+            "tan",
+            "tar",
+            "tay",
+            "tbf",
+            "tcf",
+            "tcy",
+            "tdn",
+            "tdx",
+            "te",
+            "tg",
+            "tgc",
+            "th",
+            "the",
+            "thq",
+            "thr",
+            "thv",
+            "ti",
+            "tig",
+            "tio",
+            "tk",
+            "tkg",
+            "tkt",
+            "tli",
+            "tlp",
+            "tn",
+            "tok",
+            "tpl",
+            "tpz",
+            "tqp",
+            "tr",
+            "trp",
+            "trq",
+            "trv",
+            "trw",
+            "tt",
+            "ttj",
+            "ttr",
+            "ttu",
+            "tui",
+            "tul",
+            "tuq",
+            "tuv",
+            "tuy",
+            "tvo",
+            "tvu",
+            "tw",
+            "twu",
+            "txs",
+            "txy",
+            "udl",
+            "ug",
+            "uk",
+            "uki",
+            "umb",
+            "ur",
+            "ush",
+            "uz",
+            "uzn",
+            "vai",
+            "var",
+            "ver",
+            "vi",
+            "vmc",
+            "vmj",
+            "vmm",
+            "vmp",
+            "vmz",
+            "vot",
+            "vro",
+            "wbl",
+            "wci",
+            "weo",
+            "wes",
+            "wja",
+            "wji",
+            "wo",
+            "wof",
+            "xh",
+            "xhe",
+            "xka",
+            "xmf",
+            "xmv",
+            "xmw",
+            "xpe",
+            "xti",
+            "xtu",
+            "yaq",
+            "yav",
+            "yay",
+            "ydd",
+            "ydg",
+            "yer",
+            "yes",
+            "yi",
+            "yo",
+            "zga",
+            "zgh",
+            "zoc",
+            "zoh",
+            "zor",
+            "zpv",
+            "zpy",
+            "ztg",
+            "ztn",
+            "ztp",
+            "zts",
+            "ztu",
+            "zu",
+            "zza"
+          ],
+          "gpu": {
+            "vramMinMb": 3072,
+            "cpuAllowed": true
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.partcrafter",
+      "name": "PartCrafter — 이미지 → 부품별 3D",
+      "description": "PartCrafter(NeurIPS 2025)로 물체 사진 한 장에서 부품이 따로 나뉜 3D 메시를 GLB 로 만든다. 부품 수를 정하면 그만큼 나눠 한 번에 만들며, 부품마다 색 · 이름이 달라 3D 프로그램에서 따로 고칠 수 있다. 배경은 BiRefNet(MIT)으로 지운다. NVIDIA 그래픽카드(CUDA) 전용.",
+      "author": "PromBoard",
+      "license": "MIT AND Apache-2.0",
+      "repository": "https://github.com/promboard-app/partcrafter",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "image-to-parts"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/partcrafter/releases/download/v1.0.0/promboard.partcrafter-1.0.0.zip",
+          "bytes": 382026,
+          "sha256": "2775c362b8703ff1792c51b842faa8a6ba77743b3992ee689852fed29aa6fc73",
+          "permissions": {},
+          "licenseNotice": {
+            "excludedRegions": [
+              "EU"
+            ],
+            "conditions": "트랜스포머 코드 일부가 Tencent HunyuanDiT 에서 왔고 그 부분은 Tencent Hunyuan Community License(2024-05-14판)를 따른다. EU 에서는 쓸 수 없다. 다시 나눠 줄 때는 약관 사본과 Notice 문구를 함께 준다(이 플러그인은 그 파일 머리와 NOTICE 에 담았다). 약관의 사용 제한(Acceptable Use Policy)을 지키고 받는 사람에게도 알린다. 그 판 공개일에 월 이용자가 1억 명을 넘던 회사는 Tencent 의 허락을 따로 받아야 한다. PartCrafter 모델 가중치는 MIT.",
+            "url": "https://github.com/Tencent/HunyuanDiT/blob/main/LICENSE.txt"
+          },
+          "categories": [
+            "model3d"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 8192,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
     {
       "schema": 1,
       "id": "promboard.photo-effects",
@@ -35,7 +1554,161 @@
         }
       ],
       "stars": 0,
-      "downloads": 6
+      "downloads": 7
+    },
+    {
+      "schema": 1,
+      "id": "promboard.qwen-image-2-1",
+      "name": "Qwen-Image 2.1 — 글로 만들기 · 고치기 · 투명 배경",
+      "description": "Qwen 의 Qwen-Image 2.1 로 프롬프트 글에서 이미지를 만들고, 참조 이미지(4장까지)를 이으면 고치거나 섞는다. '투명 배경'을 켜면 배경이 투명한 PNG 를 만든다. Turbo 는 8단계로 빠르다. 경량화 설정으로 판과 정밀도(원본 bf16 · unsloth GGUF Q8 · Q4)를 고르고 고른 판만 받는다 — 공통 파일 18.2GB + 트랜스포머 4.2~14.2GB. 그래픽카드 메모리 8GB 이상. 비상업(연구 · 평가) 전용 Qwen Research License. PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/qwen-image-2-1",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "generate"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/qwen-image-2-1/releases/download/v1.0.0/promboard.qwen-image-2-1-1.0.0.zip",
+          "bytes": 306295,
+          "sha256": "dbcfe6c1becb883f61b73f3ee038aeb6b62a7542ae56d4f0f5076d8db1f0fc86",
+          "permissions": {},
+          "nonCommercial": true,
+          "licenseNotice": {
+            "conditions": "Qwen Research License: 연구 · 평가 목적으로만 쓸 수 있다(상업 사용은 Alibaba 와 따로 계약해야 한다). 이 모델로 학습 · 개선한 AI 모델을 배포하면 'Built with Qwen' 을 표기하고, 'Qwen' 을 그 모델의 주 이름으로 쓰지 않는다.",
+            "url": "https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE"
+          },
+          "categories": [
+            "imageGenerate",
+            "imageEdit"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 8192,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.qwen-image-edit-2511",
+      "name": "Qwen-Image-Edit-2511 — 말로 이미지 고치기",
+      "description": "Qwen 의 Qwen-Image-Edit-2511(20B)로 이미지(1~3장)를 말로 고친다 — 배경 바꾸기 · 물건 넣고 빼기 · 여러 장을 한 장면으로 섞기 · 인물 · 제품 모습 유지. 경량화 설정으로 트랜스포머 정밀도(원본 bf16 40.9GB · unsloth GGUF Q8 21.8GB · Q4 13.2GB)를 고르고 고른 판만 받는다(공통 파일 16.8GB). 가장 가벼운 Q4 도 그래픽카드 메모리 20GB 이상. Apache-2.0. PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/qwen-image-edit-2511",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "edit"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/qwen-image-edit-2511/releases/download/v1.0.1/promboard.qwen-image-edit-2511-1.0.1.zip",
+          "bytes": 299017,
+          "sha256": "164c5802d642c9db786c681c998d9b92509d065a4daeed2ffe2c3c1f8fd3036f",
+          "permissions": {},
+          "categories": [
+            "imageEdit"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 20480,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 3
+    },
+    {
+      "schema": 1,
+      "id": "promboard.qwen-image-layered",
+      "name": "Qwen-Image-Layered — 이미지를 투명 레이어로 나누기",
+      "description": "Qwen 의 Qwen-Image-Layered(20B)로 이미지 한 장을 투명 배경 레이어 여러 장(RGBA PNG, 0번이 맨 아래)으로 나눈다 — 배경 · 사람 · 물건 · 글자를 따로 옮기고 지우고 색을 바꿀 수 있다. 경량화 설정으로 트랜스포머 정밀도(원본 bf16 40.9GB · unsloth GGUF Q8 21.8GB · Q4 13.2GB)를 고르고 고른 판만 받는다(공통 파일 16.9GB). 가장 가벼운 Q4 도 그래픽카드 메모리 20GB 이상. Apache-2.0. PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/qwen-image-layered",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "decompose"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/qwen-image-layered/releases/download/v1.0.0/promboard.qwen-image-layered-1.0.0.zip",
+          "bytes": 300043,
+          "sha256": "44b8e43062e3bb111565cba9dfe49dd0a27e51f8f96b34e6f988f10d69542bc0",
+          "permissions": {},
+          "categories": [
+            "imageEdit",
+            "objectMask"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 20480,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.remove-bg",
+      "name": "배경 제거",
+      "description": "이미지에서 주인공만 남기고 배경을 지워 투명 PNG 로 만든다. 품질 '정밀'은 BiRefNet_lite(ZhengPeng7, MIT) — 복잡한 배경에서도 깔끔하지만 사진 한 장에 메모리(RAM)를 6~7GB 쓴다(약 224MB). '빠름'은 ISNet(DIS, Apache-2.0) — RAM 약 1.6GB 로 가볍지만 배경이 복잡하면 경계가 번질 수 있다(약 179MB). 처음 값은 '빠름'이다. 모델은 고른 쪽만 원래 출처(GitHub 릴리스)에서 받는다. 실행 준비 때는 빠름 모델만 받고, 정밀 모델은 처음 정밀로 돌릴 때 받는다. 그래픽카드 없이 CPU 로 돈다. mac 은 Apple Silicon · macOS 14 이상만 된다.",
+      "author": "PromBoard",
+      "license": "MIT",
+      "repository": "https://github.com/promboard-app/remove-bg",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "remove-bg"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=0.15.0",
+          "url": "https://github.com/promboard-app/remove-bg/releases/download/v1.0.0/promboard.remove-bg-1.0.0.zip",
+          "bytes": 78594,
+          "sha256": "277885cecde870d7d0c867099bd9068eab9a06353d2c7738d9f242d0613d34c6",
+          "permissions": {}
+        }
+      ],
+      "stars": 0,
+      "downloads": 3
     },
     {
       "schema": 1,
@@ -68,7 +1741,48 @@
         }
       ],
       "stars": 0,
-      "downloads": 5
+      "downloads": 6
+    },
+    {
+      "schema": 1,
+      "id": "promboard.seedvr2",
+      "name": "SeedVR2 — 사진 · 영상 업스케일",
+      "description": "ByteDance SeedVR2 로 사진 · 영상을 2~4배 키우며 흐린 부분 · 잡티를 되살린다(한 단계 확산 복원). 사진은 투명 PNG 의 알파도 함께 키우고, 영상은 원본 소리를 그대로 담는다. 판은 3B(기본) · 7B 와 fp16 · fp8 · GGUF Q4 중에서 고르고 고른 판만 받는다. 12GB 그래픽카드는 3B · fp8 이 기본이고, 메모리가 모자라면 BlockSwap · VAE 타일을 스스로 켠다. 코드 · 가중치 모두 Apache-2.0.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/seedvr2",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "image",
+        "video"
+      ],
+      "versions": [
+        {
+          "version": "1.0.2",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/seedvr2/releases/download/v1.0.2/promboard.seedvr2-1.0.2.zip",
+          "bytes": 1242378,
+          "sha256": "ecd0758bd6ef13778a54234da21d5a30dbb2989e508c5188dfe273be46c49dec",
+          "permissions": {},
+          "categories": [
+            "upscale"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 6144,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
     },
     {
       "schema": 1,
@@ -93,6 +1807,312 @@
       ],
       "stars": 0,
       "downloads": 7
+    },
+    {
+      "schema": 1,
+      "id": "promboard.trellis2",
+      "name": "TRELLIS.2 — 이미지 → 재질 입힌 3D",
+      "description": "Microsoft TRELLIS.2(4B)로 물체 사진 한 장에서 PBR 재질(색 · 거칠기 · 금속성 · 투명도)이 입혀진 GLB 3D 모델을 만든다. 후속판 Pixal3D 도 고를 수 있다. 윈도우 전용 — trellis.cpp(C++ 실행 파일, MIT)를 GitHub 릴리스에서, GGUF 가중치를 Hugging Face 에서 받아 파이썬 · CUDA 컴파일 없이 돈다. NVIDIA 는 CUDA, AMD · 인텔은 Vulkan. 경량화(원본 f16 · GGUF Q8 · Q4)는 자동이면 그래픽카드 메모리로 고른다.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/trellis2",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "image-to-3d"
+      ],
+      "versions": [
+        {
+          "version": "1.1.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/trellis2/releases/download/v1.1.1/promboard.trellis2-1.1.1.zip",
+          "bytes": 75414,
+          "sha256": "e1498bf5751188bd265db3cdb7d5b57cbbed4b850e3eece3029ba839782a796c",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "그림 인코더 DINOv3 는 Meta DINOv3 License 를 따른다(상업 이용 가능 · 무역 제재 대상과 군사 · 무기 · 첩보 용도 금지 · 다시 나눠 줄 때 약관 사본 동봉). Pixal3D 판은 코드 · 가중치 모두 MIT 지만, 원본 HF 저장소(TencentARC/Pixal3D)가 EU 접속을 막아 두었고 상업 · 지역 이용을 묻는 이슈 #33 에 아직 답이 없다.",
+            "url": "https://github.com/facebookresearch/dinov3/blob/main/LICENSE.md"
+          },
+          "categories": [
+            "model3d"
+          ],
+          "gpu": {
+            "vramMinMb": 4096,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.triposg",
+      "name": "TripoSG — 이미지 → 3D 형상",
+      "description": "VAST-AI TripoSG(1.5B)로 물체 사진 한 장에서 3D 형상(메시)을 GLB 로 만든다. 색 · 재질 없이 모양만 만들며 날카로운 모서리와 얇은 부분을 잘 살린다. 배경은 BiRefNet(MIT)으로 지운다. NVIDIA 그래픽카드(CUDA) 전용.",
+      "author": "PromBoard",
+      "license": "MIT AND Apache-2.0",
+      "repository": "https://github.com/promboard-app/triposg",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "image-to-shape"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/triposg/releases/download/v1.0.0/promboard.triposg-1.0.0.zip",
+          "bytes": 396368,
+          "sha256": "4f4e5f0fd36848c1b70f6c2f665c3c3e212d6edc07f48098d2f63ea21902e326",
+          "permissions": {},
+          "licenseNotice": {
+            "excludedRegions": [
+              "EU"
+            ],
+            "conditions": "트랜스포머 코드 일부가 Tencent HunyuanDiT 에서 왔고 그 부분은 Tencent Hunyuan Community License(2024-05-14판)를 따른다. EU 에서는 쓸 수 없다. 다시 나눠 줄 때는 약관 사본과 Notice 문구를 함께 준다(이 플러그인은 그 파일 머리와 NOTICE 에 담았다). 약관의 사용 제한(Acceptable Use Policy)을 지키고 받는 사람에게도 알린다. 그 판 공개일에 월 이용자가 1억 명을 넘던 회사는 Tencent 의 허락을 따로 받아야 한다. TripoSG 모델 가중치는 MIT.",
+            "url": "https://github.com/Tencent/HunyuanDiT/blob/main/LICENSE.txt"
+          },
+          "categories": [
+            "model3d"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 8192,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.vibevoice",
+      "name": "VibeVoice-1.5B — 최대 4명 긴 대화 목소리 (영어 · 중국어)",
+      "description": "대본을 읽어 최대 4명이 주고받는 긴 대화 목소리(WAV)를 만든다(팟캐스트 · 오디오북). 화자마다 참조 목소리를 이으면 그 목소리로 복제한다. 한 화자를 빠르게 읽거나 한국어 실험 목소리가 필요하면 'VibeVoice-Realtime-0.5B' 플러그인을 쓴다. Microsoft 공식 가중치 VibeVoice-1.5B(5.4GB)를 받아 transformers 공식 구현으로 돌린다. 영어 · 중국어만 지원하고 한국어는 없다. MIT 이지만 공식 카드는 연구 목적 사용으로 한정하고 상업 · 실서비스 사용을 권하지 않는다.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/vibevoice",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "vibevoice"
+      ],
+      "versions": [
+        {
+          "version": "1.0.2",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/vibevoice/releases/download/v1.0.2/promboard.vibevoice-1.0.2.zip",
+          "bytes": 351611,
+          "sha256": "967c34a321358d6f18310a7bc26e5ba9401f71b1fa336f89d34f0b6e0c8d3bd6",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "모델은 MIT 이지만 공식 카드가 연구 목적 사용으로 한정하고, 더 시험하지 않은 채 상업 · 실서비스에 쓰는 것을 권하지 않는다. 동의 없는 목소리 복제 · 사칭, 실제 녹음처럼 꾸민 허위 정보, 실시간 음성 변조에 쓰지 않는다. 공식 카드는 만든 소리마다 AI 안내 음성과 워터마크를 넣었다고 적지만, 이 플러그인이 쓰는 transformers 공식 구현에는 그 기능이 없어 결과에 들어가지 않는다 — 소리를 공개할 때는 AI 로 만든 소리임을 직접 밝힌다. 영어 · 중국어 밖의 언어는 지원하지 않는다.",
+            "url": "https://huggingface.co/microsoft/VibeVoice-1.5B"
+          },
+          "categories": [
+            "voice"
+          ],
+          "languages": [
+            "en",
+            "zh"
+          ],
+          "gpu": {
+            "vramMinMb": 8000,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.vibevoice-realtime",
+      "name": "VibeVoice-Realtime-0.5B — 한 화자 빠른 목소리 (영어 · 한국어 등 실험 목소리)",
+      "description": "글을 읽어 한 화자의 목소리(WAV)를 빠르게 만든다. 공식 프리셋 목소리 17개(영어 7 + 한국어 실험 2 + 일본어 · 독일어 등 8개 언어 실험 각 1)에서 고른다. 여러 화자가 주고받는 긴 대화 · 참조 목소리 복제는 'VibeVoice-1.5B' 플러그인을 쓴다(영어 · 중국어). Microsoft 공식 가중치 VibeVoice-Realtime-0.5B(2GB, MIT)와 공식 실행 코드를 쓴다. 공식 카드는 영어용이라고 적고, 다른 언어 목소리는 '실험'이다. 연구 목적 사용으로 한정된다.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/vibevoice-realtime",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "vibevoice-realtime"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/vibevoice-realtime/releases/download/v1.0.0/promboard.vibevoice-realtime-1.0.0.zip",
+          "bytes": 647235,
+          "sha256": "264ee8283224858fb54f68e367990f50fb9e7ab962495ec026630055ba7dc353",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "모델은 MIT 이지만 공식 카드가 연구 목적 사용으로 한정하고, 더 시험하지 않은 채 상업 · 실서비스에 쓰는 것을 권하지 않는다. 동의 없는 목소리 흉내 · 사칭, 실제 녹음처럼 꾸민 허위 정보, 실시간 음성 변조, 안전 장치(워터마크 등)를 피하는 일에 쓰지 않는다. 공식 카드는 영어만 지원한다고 적고, 다른 언어 목소리는 결과를 장담할 수 없는 실험이다. 공식 카드는 만든 소리마다 AI 안내 음성과 워터마크를 넣었다고 적지만, 이 플러그인이 쓰는 공식 실행 코드에는 그 기능이 없어 결과에 들어가지 않는다 — 소리를 공개할 때는 AI 로 만든 소리임을 직접 밝힌다.",
+            "url": "https://huggingface.co/microsoft/VibeVoice-Realtime-0.5B"
+          },
+          "categories": [
+            "voice"
+          ],
+          "languages": [
+            "en",
+            "ko",
+            "ja",
+            "de",
+            "fr",
+            "it",
+            "nl",
+            "pl",
+            "pt",
+            "es"
+          ],
+          "gpu": {
+            "vramMinMb": 4096,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.wan-animate2-s2v",
+      "name": "Wan Animate-2 · S2V — 동작 옮기기 · 말하는 영상 (서버급)",
+      "description": "알리바바 Wan 공개 모델 둘을 한 노드에서 고른다. Animate-2(14B): 캐릭터 그림 속 인물이 움직임 영상 속 사람처럼 움직이는 영상(관절 전처리 없이 영상을 그대로 받는다, 빠른 판 10단계 · 일반 판 40단계). S2V(14B): 캐릭터 그림 + 목소리 파일 + 프롬프트로 그 소리에 맞춰 말하는 영상(소리 포함). 고른 모드의 파일만 받는다(Animate-2 약 46GB · S2V 약 46GB). 서버급 그래픽카드(공식 S2V 80GB 이상)가 필요하고 아직 실제로 돌려 보지 않았다(검증 안 됨). 라이선스 Apache-2.0. NVIDIA 그래픽카드 전용.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/wan-animate2-s2v",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "wan-a2s"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/wan-animate2-s2v/releases/download/v1.0.1/promboard.wan-animate2-s2v-1.0.1.zip",
+          "bytes": 580510,
+          "sha256": "99de1b37ea6ef985cbafbf419378afcc2235b3150d4fb3834c53ca3179efafa3",
+          "permissions": {},
+          "categories": [
+            "motionTransfer",
+            "videoGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 80000,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.wan22",
+      "name": "Wan 2.2 — 글 · 이미지로 영상 만들기",
+      "description": "알리바바 Wan 2.2 공개 모델로 프롬프트(글)에서, 또는 시작 프레임 그림에서 이어지는 영상을 이 PC 에서 만든다(소리 없음, mp4). 모델 '자동'은 그래픽카드에 맞는 5B 판을 고른다 — 24GB 이상은 원본(받기 약 34GB), 그 밖은 GGUF Q8(받기 약 20GB, RTX 4070 SUPER 12GB 실측: 기본 설정 720P · 3초 · 30단계 약 7분). 14B 글→영상 · 이미지→영상(각 받기 약 43GB, 검증 안 됨)도 고를 수 있고, 고른 판의 파일만 받는다. 라이선스 Apache-2.0(상업 사용 가능). NVIDIA 그래픽카드 전용.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/wan22",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "wan22"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/wan22/releases/download/v1.0.1/promboard.wan22-1.0.1.zip",
+          "bytes": 237406,
+          "sha256": "794774a86ff22ec10bfac8bf14b82d5a6da2a49888a0b50db4c8bcbcec0c8cf5",
+          "permissions": {},
+          "categories": [
+            "videoGenerate"
+          ],
+          "gpu": {
+            "vramMinMb": 12288,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
+    },
+    {
+      "schema": 1,
+      "id": "promboard.wan22-animate",
+      "name": "Wan 2.2 Animate — 동작 옮기기 · 인물 바꾸기",
+      "description": "알리바바 Wan 2.2 Animate(14B) 공개 모델로 캐릭터 그림 속 인물을 움직임 영상 속 사람의 몸짓 · 표정대로 움직이게 하거나(동작 옮기기), 영상 속 사람을 캐릭터 그림의 인물로 바꾼다(인물 바꾸기 — 인물 마스크 영상 필요). 관절 · 얼굴은 Wan 공식 전처리(YOLOv10 + ViTPose)로 뽑는다. 받기 약 27GB(변환기 GGUF Q4 · 글 인코더 · 전처리 모델, 그래픽카드 32GB 이상은 '자동'이 Q8 을 골라 약 35GB). 그래픽카드 24GB 이상 · RAM 64GB 권장이고 아직 실제로 돌려 보지 않았다(검증 안 됨). 라이선스 Apache-2.0. NVIDIA 그래픽카드 전용.",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/wan22-animate",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "wan-animate"
+      ],
+      "versions": [
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/wan22-animate/releases/download/v1.0.1/promboard.wan22-animate-1.0.1.zip",
+          "bytes": 547513,
+          "sha256": "3327585ff15c77eb070751c43b265500d507a3f873b3bf9224df9af151378877",
+          "permissions": {},
+          "categories": [
+            "motionTransfer"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 24000,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
     },
     {
       "schema": 1,
@@ -130,6 +2150,46 @@
       ],
       "stars": 0,
       "downloads": 6
+    },
+    {
+      "schema": 1,
+      "id": "promboard.z-image",
+      "name": "Z-Image — 글로 이미지 만들기 (Turbo · Base)",
+      "description": "Tongyi-MAI(알리바바)의 Z-Image 로 프롬프트 글에서 이미지 한 장(PNG)을 만든다. Turbo 는 8단계로 빠르고, Base 는 네거티브 프롬프트 · 프롬프트 따르기 세기를 쓴다. 경량화 설정으로 판과 정밀도(unsloth GGUF Q8 · Q4)를 고르고 고른 판만 받는다 — 공통 파일 8.2GB + 트랜스포머 5.0~7.2GB. 그래픽카드 메모리 8GB 이상. Apache-2.0. PromBoard 팀은 만들기만 하고 실제로 돌려 보지 않았다(검증 안 됨).",
+      "author": "PromBoard",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/promboard-app/z-image",
+      "contents": [
+        "nodes"
+      ],
+      "nodes": [
+        "generate"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/z-image/releases/download/v1.0.0/promboard.z-image-1.0.0.zip",
+          "bytes": 297464,
+          "sha256": "cdd1f23ed770c9faae27eed6d40068aac07a01db9ac15b003ca8a74c4e070ff8",
+          "permissions": {},
+          "categories": [
+            "imageGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 8192,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        }
+      ],
+      "stars": 0,
+      "downloads": 2
     }
   ]
 }
