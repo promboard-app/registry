@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T15:49:53.942Z",
+  "generatedAt": "2026-10-25T15:50:36.239Z",
   "plugins": [
     {
       "schema": 1,
@@ -320,7 +320,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 3
     },
     {
       "schema": 1,
@@ -391,7 +391,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 3
     },
     {
       "schema": 1,
@@ -1742,7 +1742,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 3
     },
     {
       "schema": 1,
@@ -1866,7 +1866,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 4
     },
     {
       "schema": 1,
@@ -2190,6 +2190,27 @@
             "win",
             "linux"
           ]
+        },
+        {
+          "version": "1.0.2",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/wan-animate2-s2v/releases/download/v1.0.2/promboard.wan-animate2-s2v-1.0.2.zip",
+          "bytes": 583527,
+          "sha256": "7259215e3fee7a50e28e2fd4da46d5b9123b5ca9a1e243cd2b1624a6854ea3e3",
+          "permissions": {},
+          "categories": [
+            "motionTransfer",
+            "videoGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 80000,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
         }
       ],
       "stars": 0,
@@ -2368,7 +2389,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 4
     }
   ]
 }
