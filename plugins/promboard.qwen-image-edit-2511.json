@@ -14,14 +14,6 @@
   ],
   "versions": [
     {
-      "version": "1.0.0",
-      "app": ">=1.0.1",
-      "url": "https://github.com/promboard-app/qwen-image-edit-2511/releases/download/v1.0.0/promboard.qwen-image-edit-2511-1.0.0.zip",
-      "bytes": 292269,
-      "sha256": "7237ffc36437f33644ee9025be9ff5d71663f05232e7a7a6a545db237753b949",
-      "permissions": {}
-    },
-    {
       "version": "1.0.1",
       "app": ">=1.0.3",
       "url": "https://github.com/promboard-app/qwen-image-edit-2511/releases/download/v1.0.1/promboard.qwen-image-edit-2511-1.0.1.zip",
