@@ -33,6 +33,27 @@
         "mac",
         "linux"
       ]
+    },
+    {
+      "version": "1.0.1",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/z-image/releases/download/v1.0.1/promboard.z-image-1.0.1.zip",
+      "bytes": 298927,
+      "sha256": "3c1a6e5ea96e0c5621a8d0bffe234fbab6b25209a1c1c44287a610b141e50689",
+      "permissions": {},
+      "categories": [
+        "imageGenerate"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 8192,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "mac",
+        "linux"
+      ]
     }
   ]
 }
