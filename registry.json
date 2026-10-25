@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T15:44:59.398Z",
+  "generatedAt": "2026-10-25T15:45:43.776Z",
   "plugins": [
     {
       "schema": 1,
@@ -280,6 +280,28 @@
           "url": "https://github.com/promboard-app/flux2-klein/releases/download/v1.0.0/promboard.flux2-klein-1.0.0.zip",
           "bytes": 302015,
           "sha256": "a553ad0947a35bf161aa67bd898e75f7268e0e473d18daa85656e7891bca7503",
+          "permissions": {},
+          "categories": [
+            "imageGenerate",
+            "imageEdit"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 6144,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "mac",
+            "linux"
+          ]
+        },
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/flux2-klein/releases/download/v1.0.1/promboard.flux2-klein-1.0.1.zip",
+          "bytes": 303478,
+          "sha256": "870d64054eaf29309eb4526f2c13ba99d747cd6053be64bf752dc7d96334f6a0",
           "permissions": {},
           "categories": [
             "imageGenerate",
