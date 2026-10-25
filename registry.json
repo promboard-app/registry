@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T15:50:36.239Z",
+  "generatedAt": "2026-10-25T15:51:21.489Z",
   "plugins": [
     {
       "schema": 1,
@@ -661,7 +661,7 @@
       "schema": 1,
       "id": "promboard.ltx25",
       "name": "LTX-2.5 — 소리까지 든 영상 만들기 (첫 · 끝 프레임)",
-      "description": "Lightricks 의 LTX-2.5(22B) 공개 모델로 프롬프트에서, 첫 프레임에서, 또는 첫 · 끝 프레임 사이를 잇는 영상을 소리까지 함께 만든다. 길이는 '자동'이면 모델이 프롬프트에 맞춰 정한다. 모델 '자동'은 RAM 96GB 이상이면 원본(받기 약 70GB), 그 밖은 GGUF Q4(받기 약 46GB, 무게를 RAM 에 둔다)를 고른다(허깅페이스 사용 승인 필요). 아직 실제로 돌려 보지 않았다(검증 안 됨). 라이선스 LTX-2.x Community License — 연매출 1천만 달러 이상이면 유료 계약, Lightricks 제품과 경쟁하는 제품은 별도 라이선스. NVIDIA 그래픽카드 전용.",
+      "description": "Lightricks 의 LTX-2.5(22B) 공개 모델로 프롬프트에서, 첫 프레임에서, 또는 첫 · 끝 프레임 사이를 잇는 영상을 소리까지 함께 만든다. 길이는 '자동'이면 모델이 프롬프트에 맞춰 정한다. 모델 '자동'은 RAM 96GB · 그래픽카드 24GB 이상이면 원본(받기 약 70GB), 그 밖은 GGUF Q4(받기 약 46GB, 무게를 RAM 에 둔다)를 고른다(허깅페이스 사용 승인 필요). 아직 실제로 돌려 보지 않았다(검증 안 됨). 라이선스 LTX-2.x Community License — 연매출 1천만 달러 이상이면 유료 계약, Lightricks 제품과 경쟁하는 제품은 별도 라이선스. NVIDIA 그래픽카드 전용.",
       "author": "PromBoard",
       "license": "Apache-2.0",
       "repository": "https://github.com/promboard-app/ltx25",
@@ -696,10 +696,35 @@
             "win",
             "linux"
           ]
+        },
+        {
+          "version": "1.0.2",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/ltx25/releases/download/v1.0.2/promboard.ltx25-1.0.2.zip",
+          "bytes": 224223,
+          "sha256": "c04f46bb7305eedd39629c20873231b0011c13af21f9a3232120c9fa37310498",
+          "permissions": {},
+          "licenseNotice": {
+            "conditions": "LTX-2.x Community License: 계열사를 합친 연매출이 1천만 달러 이상인 회사는 비상업 목적 밖의 모든 사용에 Lightricks 와 유료 계약이 필요하다. Lightricks 의 상업 제품 · 서비스와 직접 경쟁하거나 대체하는 제품에 쓰려면 별도 상용 라이선스가 필요하다(부속서 A 20번). 안전장치 · 필터 · 워터마크 · 출처 표시를 우회하거나 끄면 안 되고(19번), 상업 목적으로 다른 AI 모델을 학습 · 개선하는 데 쓸 수 없다(18번). 미국 포괄 제재 지역 거주자는 쓸 수 없다(7장).",
+            "url": "https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x"
+          },
+          "categories": [
+            "videoAudio",
+            "videoGenerate"
+          ],
+          "unverified": true,
+          "gpu": {
+            "vramMinMb": 16384,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 5
     },
     {
       "schema": 1,
@@ -1803,7 +1828,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 3
+      "downloads": 5
     },
     {
       "schema": 1,
@@ -2214,7 +2239,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 2
+      "downloads": 4
     },
     {
       "schema": 1,
