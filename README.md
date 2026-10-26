@@ -41,8 +41,16 @@ PromBoard 앱의 **플러그인 매니저**가 읽는 플러그인 목록입니�
 ```
 
 - **`url`** 은 `repository` 저장소의 `/releases/download/<태그>/<파일>.zip` 입니다. Release 화면의 파일 주소를 그대로 붙여 넣으세요. `..`·`%2e` 처럼 읽을 때 바뀌는 주소는 떨어집니다.
-- **`versions[]` 의 `app` · `requires` · `permissions` · `nonCommercial` · `licenseNotice`** 는 zip 안 `manifest.json` 과 같아야 합니다.
+- **`versions[]` 의 `app` · `requires` · `permissions` · `nonCommercial` · `licenseNotice` · 라벨(`categories` · `languages` · `unverified` · `gpu` · `platforms`)** 은 zip 안 `manifest.json` 과 같아야 합니다(`platforms` 는 `python.lock` 에 적은 운영체제, 코드 없는 플러그인은 셋 다). 앱 저장소의 `server/src/tools/packPlugin.ts` 가 zip 과 항목을 같이 만들어 줍니다.
 - **새 버전**: 배열 끝에 버전을 하나 더 붙입니다. **한 번 올린 버전은 고치거나 지울 수 없습니다.** 바꾸려면 버전을 올리세요.
+
+## 아이콘 (`icons/<플러그인 id>.png`, 선택)
+
+플러그인 매니저 카드와 상세 창에 보이는 그림입니다. 설치 전에도 보입니다. 같은 PR 이나 따로 낸 PR 로 `icons/<플러그인 id>.png` 을 더합니다.
+
+- 정사각 PNG, 64~1024px(256px 권장), 256KB 이하. 모서리는 앱이 둥글게 자르니 네모 그대로 두고, 배경을 채웁니다.
+- 회사 · 모델 로고를 쓸 때는 그 회사가 공개한 공식 로고를 씁니다.
+- 아이콘이 없으면 zip 안 `manifest.json` 의 `icon` 그림을 설치 뒤에 보이고, 그것도 없으면 기본 퍼즐 아이콘입니다.
 
 ## 커스텀 노드 화면 (`manifest.json` 의 `nodes[]`)
 
@@ -68,11 +76,26 @@ PromBoard 앱의 **플러그인 매니저**가 읽는 플러그인 목록입니�
 - `text` 레이아웃 또는 옛 `template` 만 쓴 노드에 `views` · `compare` 를 적음, 보기 방식에 필요한 포트가 없음, `compare` 쌍이 그림 입력 · 그림 출력이 아님
 - `renderEffect: "audio"` 인데 입력이 소리 하나(선 하나) · 출력이 소리 하나가 아님
 
+## 라벨 (`manifest.json`)
+
+매니저가 설치 전에 보여 주는 라벨입니다. 모두 선택 칸입니다.
+
+| 칸 | 값 | 뜻 |
+|---|---|---|
+| `categories` | 1~3개: `imageGenerate` · `imageEdit` · `videoGenerate` · `videoAudio` · `motionTransfer` · `voice` · `music` · `sfx` · `model3d` · `upscale` · `photoEffect` · `pose` · `objectMask` · `audioEffect` | 기능 라벨(앞이 대표). 카드 알약과 기능별 거르기에 씁니다 |
+| `languages` | 언어 태그 1~1000개(`ko` · `en` · `yue` · `zh-Hans` · `pt-BR`) | 목소리 · 음성 · 가사 모델의 지원 언어. 상세 창에 보입니다 |
+| `unverified` | `true` | 만든 사람이 실제로 돌려 보지 못했습니다. '검증됨' 대신 '검증 안 됨'으로 보이고, 마우스를 올리면 그 까닭이 보입니다 |
+
+- 고성능 · 서버급 알약은 칸이 없습니다. `gpu.vramMinMb` 가 16384 를 넘으면 고성능, 32768 을 넘으면 서버급입니다. 가장 가벼운 판이 실제로 도는 최소 값을 적으세요.
+- 지원 OS 는 칸이 없습니다. `python.lock` 에 잠금 파일을 적은 운영체제(`win` · `mac` · `linux`)가 상세 창에 보이고, 코드 없는 플러그인은 셋 다입니다.
+- 라벨 칸을 쓰면 `app` 을 `>=1.0.3` 이상으로 적으세요. 그보다 옛 앱은 이 칸을 몰라 플러그인을 건너뜁니다(검사에서 떨어집니다). 그런 버전은 항목에 `gpu` 와 `platforms` 도 옮겨 적습니다.
+
 ## 자동 검사 (PR)
 
 `.github/workflows/check.yml` 이 PR 마다 확인합니다. 플러그인 코드는 **실행하지 않습니다**. 받아서 풀고 읽기만 합니다.
 
 - 항목 형식, 파일 이름 = id, id 앞부분 = 저장소 주인
+- 아이콘(`icons/`)은 레지스트리에 있는 플러그인의 `<id>.png` 이고 진짜 PNG · 정사각 · 크기 상한 안인가
 - 올린 버전을 고치거나 지우지 않았는가
 - 필요한 플러그인(`requires`)이 이 레지스트리에 있는가
 - 새 버전의 zip 을 받아 크기·sha256 이 맞는가
