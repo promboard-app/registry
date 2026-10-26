@@ -3,7 +3,7 @@
 # pull_request(포크 PR 에 쓰기 권한·비밀값 없음)로 돈다 — pull_request_target 으로 바꾸지 않는다.
 # `check` 는 main 보호 규칙의 필수 검사다. 필수 검사는 모든 PR 에서 결과를 내야 하므로 `paths:` 로 거르지 않는다 —
 # 거르면 plugins/ 를 안 건드린 PR(README 고치기 등)은 검사가 영영 '대기'라 병합이 막힌다(GitHub 동작).
-# 대신 늘 돌고, plugins/ 가 병합 대상과 같으면 검사를 건너뛰고 통과한다.
+# 대신 늘 돌고, plugins/ · icons/ 가 병합 대상과 같으면 검사를 건너뛰고 통과한다.
 name: 플러그인 검사
 
 on:
@@ -28,11 +28,12 @@ jobs:
           ref: ${{ github.event.pull_request.base.sha }}
           path: base
 
-      - name: plugins/ 가 바뀌었나
+      - name: plugins/ · icons/ 가 바뀌었나
         id: changes
         run: |
-          if [ -d head/plugins ] && [ -d base/plugins ] && diff -rq base/plugins head/plugins > /dev/null; then
-            echo "plugins/ 가 그대로다 — 검사를 건너뛰고 통과한다"
+          same() { { [ ! -e "base/$1" ] && [ ! -e "head/$1" ]; } || diff -rq "base/$1" "head/$1" > /dev/null 2>&1; }
+          if [ -d head/plugins ] && [ -d base/plugins ] && same plugins && same icons; then
+            echo "plugins/ · icons/ 가 그대로다 — 검사를 건너뛰고 통과한다"
             echo "plugins=false" >> "$GITHUB_OUTPUT"
           else
             echo "plugins=true" >> "$GITHUB_OUTPUT"
