@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-28T09:42:08.484Z",
+  "generatedAt": "2026-10-29T10:00:26.114Z",
   "plugins": [
     {
       "schema": 1,
@@ -1694,7 +1694,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 7
+      "downloads": 8
     },
     {
       "schema": 1,
@@ -1890,7 +1890,7 @@
           ]
         }
       ],
-      "stars": 0,
+      "stars": null,
       "downloads": 4
     },
     {
