@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "promboard.anime2d-colorize",
+  "name": "2D 애니메이션 팩 — 선화 채색 (AniDoc)",
+  "description": "2D 애니메이션 팩은 세 장으로 나뉩니다 — 이 카드(선화 채색)와 '2D 애니메이션 팩 — 프레임 사이 채우기' · '2D 애니메이션 팩 — 키프레임으로 채색 영상'. 선화 영상(또는 컬러 영상)을 캐릭터 설정화 1장의 색으로 칠한 영상(512×320)으로 만든다. 공개 모델 AniDoc(CVPR 2025, Stable Video Diffusion 미세조정)과 점 맞추기(SuperPoint · LightGlue) · 점 따라가기(CoTracker2)를 원래 출처에서 받는다(약 10.6GB). NVIDIA 그래픽카드 8GB 이상, 윈도우 · 리눅스. 예제 그림 3장과 예제 워크플로우 1개가 들어 있다. CoTracker · SuperPoint 가 비상업 라이선스라 결과물에 비상업 표시가 붙는다. Powered by Stability AI.",
+  "author": "PromBoard",
+  "license": "Apache-2.0 AND MIT AND CC-BY-NC-4.0 AND LicenseRef-SuperPoint-NC",
+  "repository": "https://github.com/promboard-app/anime2d-colorize",
+  "contents": [
+    "nodes",
+    "cards",
+    "workflows"
+  ],
+  "nodes": [
+    "colorize"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/anime2d-colorize/releases/download/v1.0.0/promboard.anime2d-colorize-1.0.0.zip",
+      "bytes": 1284684,
+      "sha256": "3f89d200cf5cddc9b9cb79b82216a9ad705f771636ba9cc75e2eab8da8b71112",
+      "permissions": {},
+      "nonCommercial": true,
+      "licenseNotice": {
+        "conditions": "점 따라가기 CoTracker(코드 · 가중치 CC-BY-NC-4.0)와 점 찾기 SuperPoint(Magic Leap 비상업 연구용 라이선스)가 비상업이라 판매 · 광고 · 유료 서비스에 쓸 수 없다. 채색 모델 AniDoc 은 Stable Video Diffusion 미세조정본이라 Stability AI Community License 도 따른다: 상업 이용은 연매출 100만 달러 미만만 · Stability AI 에 등록 · 'Powered by Stability AI' 표기, 결과물로 다른 기반 생성 AI 모델을 만들거나 개선하지 않는다.",
+        "url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/9e43909513c6714f1bc78bcb44d96e733cd242aa/LICENSE.md"
+      },
+      "categories": [
+        "videoGenerate"
+      ],
+      "gpu": {
+        "vramMinMb": 8192,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "linux"
+      ]
+    }
+  ]
+}
