@@ -33,6 +33,25 @@
         "win",
         "linux"
       ]
+    },
+    {
+      "version": "1.0.1",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/anime2d/releases/download/v1.0.1/promboard.anime2d-1.0.1.zip",
+      "bytes": 1700118,
+      "sha256": "c9c975ce199880f11b8717f130c6e472de417f3fbc7de66f0ea90dd65f4c49ca",
+      "permissions": {},
+      "categories": [
+        "videoGenerate"
+      ],
+      "gpu": {
+        "vramMinMb": 4096,
+        "cpuAllowed": true
+      },
+      "platforms": [
+        "win",
+        "linux"
+      ]
     }
   ]
 }
