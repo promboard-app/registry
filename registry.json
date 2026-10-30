@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-30T20:37:04.062Z",
+  "generatedAt": "2026-10-30T21:25:12.577Z",
   "plugins": [
     {
       "schema": 1,
@@ -59,7 +59,7 @@
         }
       ],
       "stars": 0,
-      "downloads": 7
+      "downloads": 8
     },
     {
       "schema": 1,
@@ -84,6 +84,30 @@
           "url": "https://github.com/promboard-app/anime2d-colorize/releases/download/v1.0.0/promboard.anime2d-colorize-1.0.0.zip",
           "bytes": 1284684,
           "sha256": "3f89d200cf5cddc9b9cb79b82216a9ad705f771636ba9cc75e2eab8da8b71112",
+          "permissions": {},
+          "nonCommercial": true,
+          "licenseNotice": {
+            "conditions": "점 따라가기 CoTracker(코드 · 가중치 CC-BY-NC-4.0)와 점 찾기 SuperPoint(Magic Leap 비상업 연구용 라이선스)가 비상업이라 판매 · 광고 · 유료 서비스에 쓸 수 없다. 채색 모델 AniDoc 은 Stable Video Diffusion 미세조정본이라 Stability AI Community License 도 따른다: 상업 이용은 연매출 100만 달러 미만만 · Stability AI 에 등록 · 'Powered by Stability AI' 표기, 결과물로 다른 기반 생성 AI 모델을 만들거나 개선하지 않는다.",
+            "url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/9e43909513c6714f1bc78bcb44d96e733cd242aa/LICENSE.md"
+          },
+          "categories": [
+            "videoGenerate"
+          ],
+          "gpu": {
+            "vramMinMb": 8192,
+            "cpuAllowed": false
+          },
+          "platforms": [
+            "win",
+            "linux"
+          ]
+        },
+        {
+          "version": "1.0.1",
+          "app": ">=1.0.3",
+          "url": "https://github.com/promboard-app/anime2d-colorize/releases/download/v1.0.1/promboard.anime2d-colorize-1.0.1.zip",
+          "bytes": 1289360,
+          "sha256": "e1361e20ae9414c617745eb2bb2d2dad1183e673b3ef1a3688c44af7e4eb397c",
           "permissions": {},
           "nonCommercial": true,
           "licenseNotice": {
