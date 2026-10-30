@@ -34,6 +34,26 @@
         "win",
         "linux"
       ]
+    },
+    {
+      "version": "1.0.1",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/anime2d-tooncomposer/releases/download/v1.0.1/promboard.anime2d-tooncomposer-1.0.1.zip",
+      "bytes": 961993,
+      "sha256": "70147988934e1e4382945db68afcce2a60ed0250e103c9f436dce30a0f0e39a5",
+      "permissions": {},
+      "categories": [
+        "videoGenerate"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 57344,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "linux"
+      ]
     }
   ]
 }
