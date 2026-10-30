@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "id": "promboard.anime2d-tooncomposer",
+  "name": "2D 애니메이션 팩 — 키프레임으로 채색 영상 (ToonComposer)",
+  "description": "일반 PC 에서는 돌지 않습니다. 그래픽카드 메모리 57GB 급, 받을 용량 약 82GB, RAM 76GB 넘게 씀. 공개된 모델 파일로는 예제가 재현되지 않는다는 보고가 있습니다(이슈 #19). 2D 애니메이션 팩은 세 장으로 나뉩니다 — '2D 애니메이션 팩 — 프레임 사이 채우기' · '2D 애니메이션 팩 — 선화 채색' · 이 카드. 컬러 키프레임 1~4장과 선화 키프레임 1~4장, 영어 프롬프트로 중간 프레임과 채색을 한 번에 만든 영상(17~61프레임, 480p · 608p)을 낸다. 선화의 일부를 마스크로 풀어 그곳만 자유롭게 움직이게 할 수도 있다. 모델은 텐센트 ARC 의 ToonComposer(MIT)와 그 바탕인 Wan2.1-I2V-14B-480P(Apache-2.0)를 허깅페이스에서 받는다. 아직 실제로 돌려 보지 않았다(검증 안 됨). NVIDIA 그래픽카드 전용, 윈도우 · 리눅스.",
+  "author": "PromBoard",
+  "license": "MIT AND Apache-2.0",
+  "repository": "https://github.com/promboard-app/anime2d-tooncomposer",
+  "contents": [
+    "nodes",
+    "cards",
+    "workflows"
+  ],
+  "nodes": [
+    "compose"
+  ],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "app": ">=1.0.3",
+      "url": "https://github.com/promboard-app/anime2d-tooncomposer/releases/download/v1.0.0/promboard.anime2d-tooncomposer-1.0.0.zip",
+      "bytes": 958643,
+      "sha256": "05123722f4e53e469f60110c2d45e5c8c6084edc710cda43b36f2f5319824f5e",
+      "permissions": {},
+      "categories": [
+        "videoGenerate"
+      ],
+      "unverified": true,
+      "gpu": {
+        "vramMinMb": 57344,
+        "cpuAllowed": false
+      },
+      "platforms": [
+        "win",
+        "linux"
+      ]
+    }
+  ]
+}
