@@ -43,6 +43,7 @@ PromBoard 앱의 **플러그인 매니저**가 읽는 플러그인 목록입니�
 - **`url`** 은 `repository` 저장소의 `/releases/download/<태그>/<파일>.zip` 입니다. Release 화면의 파일 주소를 그대로 붙여 넣으세요. `..`·`%2e` 처럼 읽을 때 바뀌는 주소는 떨어집니다.
 - **`versions[]` 의 `app` · `requires` · `permissions` · `nonCommercial` · `licenseNotice` · 라벨(`categories` · `languages` · `unverified` · `gpu` · `platforms`)** 은 zip 안 `manifest.json` 과 같아야 합니다(`platforms` 는 `python.lock` 에 적은 운영체제, 코드 없는 플러그인은 셋 다). 앱 저장소의 `server/src/tools/packPlugin.ts` 가 zip 과 항목을 같이 만들어 줍니다.
 - **새 버전**: 배열 끝에 버전을 하나 더 붙입니다. **한 번 올린 버전은 고치거나 지울 수 없습니다.** 바꾸려면 버전을 올리세요.
+- **디자인 템플릿**: `contents` 에 `designTemplates` 를 담으면 `app` 을 `>=1.0.9` 이상으로 적으세요. 그보다 옛 앱은 이 담는 것을 몰라 플러그인을 건너뜁니다(검사에서 떨어집니다). 형식은 앱 저장소 `docs/Scrum4/02_스키마-v0.md` §4-3 입니다.
 
 ## 아이콘 (`icons/<플러그인 id>.png`, 선택)
 
